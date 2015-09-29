@@ -7,8 +7,10 @@ This repository contains a couple of general purpose resources, like the graphic
 
 We provide handcrafted SVGs of a flat top-view of the gaming area, which we use in our simulators.
 It is handcrafted, so that we can add a lot of metadata into this and use it as a database of game element positions, special areas, etc.
+There is a lot of information in the comments of the actual SVGs, so be sure to check out the raw source code as well.
 
 It also uses our internal coordinate system, which has its origin at the center of the game area and has the x-axis in parallel to the short side of the game area ("left to right") and the y-axis parallel to the long side ("down to up").
+
 This is a mathematical coordinate system which allows easy mirroring of coordinates *and angles* along the x-axis for easy symmetry of game area.
 Please note that the y-axis grows "upwards", and not "downwards" as in most graphics coordinate systems.
 
