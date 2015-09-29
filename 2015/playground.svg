@@ -1,0 +1,351 @@
+<svg version="1.1"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns="http://www.w3.org/2000/svg"
+	width="2300" height="3300"
+	viewBox="-1150 -1650 2300 3300">
+
+	<!--
+		Copyright (c) 2015, Roboterclub Aachen e.V.
+		All rights reserved.
+
+		Redistribution and use in source and binary forms, with or without
+		modification, are permitted provided that the following conditions are met:
+
+		 * Redistributions of source code must retain the above copyright
+		   notice, this list of conditions and the following disclaimer.
+		 * Redistributions in binary form must reproduce the above copyright
+		   notice, this list of conditions and the following disclaimer in the
+		   documentation and/or other materials provided with the distribution.
+		 * Neither the name of the Roboterclub Aachen e.V. nor the
+		   names of its contributors may be used to endorse or promote products
+		   derived from this software without specific prior written permission.
+
+		THIS SOFTWARE IS PROVIDED BY ROBOTERCLUB AACHEN E.V. ''AS IS'' AND ANY
+		EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+		WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+		DISCLAIMED. IN NO EVENT SHALL ROBOTERCLUB AACHEN E.V. BE LIABLE FOR ANY
+		DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+		(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+		LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+		ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+		(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+		SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ 	-->
+
+ 	<title>Eurobot 2015 Game Arena</title>
+
+ 	<!-- The official eurobot colors are:
+		- sky blue:			RAL5015		#007cb0
+		- traffic yellow:	RAL1023		#f7b500
+		- yellow green:		RAL6018		#61993b
+		- traffic red:		RAL3020		#bb1e10
+		- dark black:		RAL9005		#0e0e10
+		- flint grey:		RAL7032		#b5b0a1
+
+		The colors are hardcoded since this significantly speeds up drawing.
+	-->
+	<defs>
+		<!-- helper objects -->
+		<circle id="light-hole" r="17.5" stroke="black" stroke-width="1" fill-opacity="0"/>
+		<clipPath id="clip-half-line">
+			<path d="
+				M-200,-1050
+				A200,200 0 0 0 0,-850
+				L0,0
+				L1000,10
+				L1000,-1500
+				Z
+				"/>
+		</clipPath>
+		<path id="half-line" stroke="black" stroke-width="20" fill-opacity="0" clip-path="url(#clip-half-line)" d="
+			M1000,-1250
+			A150,150 0 0 0 850,-1100
+			A150,150 0 0 1 700,-950
+			L-180,-950
+			M850,-1100
+			L850,-640
+			A150,150 0 0 1 700,-490
+			A150,150 0 0 0 550,-340
+			L550,1
+			M850,-950
+			L1000,-950
+			M850,-650
+			L1000,-650
+			"/>
+
+		<g id="start-area">
+			<path d="
+				M-200,-1500
+				L-200,-1050
+				A200,200 0 0 0 200,-1050
+				L200,-1500
+				Z
+				"/>
+			<g stroke="black" stroke-width="1">
+				<rect x="-222" y="-1500" width="22" height="400"/>
+				<rect x="200"  y="-1500" width="22" height="400"/>
+
+				<rect x="-35" y="-1500" width="70" height="70"/>
+				<use x="0" y="-1465" xlink:href="#light-hole"/>
+
+				<rect x="-200" y="-1452" width="165" height="22"/>
+				<rect x="35"   y="-1452" width="165" height="22"/>
+			</g>
+		</g>
+
+		<g id="cinemas">
+			<rect y="-1500" x="-622" height="400" width="400"/>
+			<rect y="-1500" x="222"  height="400" width="400"/>
+		</g>
+
+		<g id="stair">
+			<!-- stairs base colors -->
+			<rect x="-1000" y="-511" width="579.5" height="500"/>
+
+			<!-- sidewalks of stairs -->
+			<rect x="-700" y="-511" width="279.5" height="100" fill="#b5b0a1"/>
+			<rect x="-700" y="-111" width="279.5" height="100" fill="#b5b0a1"/>
+
+			<!-- draw edges of stairs -->
+			<path stroke="black" stroke-width="1" fill-opacity="0" d="
+				M-978,-11
+				L-978,-511
+				M-630,-11
+				L-630,-511
+				M-560,-11
+				L-560,-511
+				M-490,-11
+				L-490,-511
+
+				M-1000,-11
+				L-420,-11
+				M-1000,-511
+				L-420,-511
+				M-1000,-533
+				L-420,-533
+
+				M-420,0
+				L-420,533
+			"/>
+		</g>
+
+		<g id="beacon">
+			<!-- drawn so that the origin is in the middle of the beacon -->
+			<rect x="-40" y="-40" width="80" height="80" fill="black"/>
+			<!-- the small gray squares in the corners -->
+			<rect x="-40" y="-40" width="20" height="20" fill="gray"/>
+			<rect x="20" y="-40" width="20" height="20" fill="gray"/>
+			<rect x="20" y="20" width="20" height="20" fill="gray"/>
+			<rect x="-40" y="20" width="20" height="20" fill="gray"/>
+			<!-- the small screws -->
+			<circle cx="-30" cy="-30" r="2.5" stroke="black" stroke-width="1" fill-opacity="0"/>
+			<circle cx="30" cy="-30" r="2.5" stroke="black" stroke-width="1" fill-opacity="0"/>
+			<circle cx="-30" cy="30" r="2.5" stroke="black" stroke-width="1" fill-opacity="0"/>
+			<circle cx="30" cy="30" r="2.5" stroke="black" stroke-width="1" fill-opacity="0"/>
+
+			<!-- the border -->
+			<rect x="-40" y="-40" width="80" height="80" stroke="black" stroke-width="2" fill-opacity="0"/>
+		</g>
+
+		<!-- fixed game elements -->
+		<g id="clapperboard">
+			<!-- drawn so that the origin is in the upper **left** corner -->
+			<rect x="0" y="-160" width="30" height="160"/>
+			<!-- the "black" stripes -->
+			<rect x="0" y="-160" width="30" height="20" fill="#0e0e10"/>
+			<rect x="0" y="-120" width="30" height="20" fill="#0e0e10"/>
+			<rect x="0" y="-80"  width="30" height="20" fill="#0e0e10"/>
+			<rect x="0" y="-40"  width="30" height="20" fill="#0e0e10"/>
+			<rect x="0" y="-160" width="30" height="160" stroke="black" stroke-width="2" fill-opacity="0"/>
+		</g>
+		<g id="popcorn-machine" fill="#007cb0" stroke="black" stroke-width="2">
+			<!-- drawn so that the origin is in the **center left** -->
+			<!-- masking apparently slows down rendering and we don't really need it -->
+			<mask id="mask-pop">
+				<rect x="0" y="-35" width="70" height="70" fill="white"/>
+				<circle cx="35" cy="0" r="23.5" fill="black"/>
+			</mask>
+			<rect x="0" y="-24" width="48" height="48"/>
+			<circle cx="35" cy="0" r="10" stroke-width="1"/>
+			<rect x="0" y="-35" width="70" height="70" mask="url(#mask-pop)"/>
+
+			<rect x="0" y="-35" width="70" height="70" fill-opacity="0"/>
+			<circle cx="35" cy="0" r="23.5" fill-opacity="0"/>
+			<rect x="-22" y="-35" width="22" height="70"/>
+		</g>
+
+		<!-- mobile game elements -->
+		<g id="stand" stroke="black" stroke-width="2">
+			<circle r="30"/>
+			<circle r="17.5"/>
+		</g>
+		<g id="cup" stroke="black" stroke-width="2" fill="whitesmoke">
+			<circle r="47.5"/>
+			<circle r="27"/>
+		</g>
+		<circle id="light" r="32.5" stroke="black" stroke-width="2" fill="yellow"/>
+		<circle id="popcorn" r="20" stroke="black" stroke-width="2" fill="whitesmoke"/>
+	</defs>
+
+	<!-- Our internal coordinate system is:
+
+		- the origin is in the center of the game area
+		- x axis: goes from the stairs to the building area from negative to positive (left to right)
+		- y axis: goes from the yellow to green start area from negative to positive (down to up)
+	-->
+
+	<!-- red -->
+	<rect x="-1022" y="-1522" width="2044" height="3044" fill="#bb1e10"/>
+	<!-- blue gamearea -->
+	<rect x="-1000" y="-1500" width="2000" height="3000" fill="#007cb0"/>
+
+	<g id="decal" stroke="black" stroke-width="10" transform="translate(70,0)">
+		<path fill="#bb1e10" d="
+			M-155,-585
+			A95,95 0 0 1 -245,-490
+			L-245,490
+			A95,95 0 0 1 -155,585
+			L155,585
+			A95,95 0 0 1 245,490
+			L245,-490
+			A95,95 0 0 1 155,-585
+			Z
+
+			M-150,-485
+			L150,-485
+			M-150,485
+			L150,485
+		"/>
+		<!-- The `Futura` font family may not be available on your browser !! -->
+		<text x="0" y="49" transform="rotate(90) scale(1,-1)" font-family="Futura" font-size="130" text-anchor="middle" stroke-width="0">ROBOMOVIES</text>
+	</g>
+
+	<g id="stairs">
+		<use xlink:href="#stair" fill="#f7b500"/>
+		<use xlink:href="#stair" fill="#61993b" transform="scale(1,-1)"/>
+	</g>
+
+	<g id="cinemas-green">
+		<use xlink:href="#cinemas" fill="#61993b"/>
+	</g>
+
+	<g id="cinemas-yellow">
+		<use xlink:href="#cinemas" fill="#f7b500" transform="scale(1,-1)"/>
+	</g>
+
+	<g id="start-area-yellow" fill="#f7b500">
+		<use xlink:href="#start-area"/>
+	</g>
+
+	<g id="start-area-green" fill="#61993b">
+		<use xlink:href="#start-area" transform="scale(1,-1)"/>
+	</g>
+
+	<g id="building-area" fill="#bb1e10">
+		<path d="
+			M1000,-400
+			L900,-400
+			A100,100 0 0 0 800,-300
+			L800,300
+			A100,100 0 0 0 900,400
+			L1000,400
+			Z"/>
+		<g stroke="black" stroke-width="1">
+			<rect x="900" y="-300" width="100" height="600"/>
+			<use x="950" y="-250" xlink:href="#light-hole"/>
+			<use x="950" y="250"  xlink:href="#light-hole"/>
+		</g>
+	</g>
+
+	<g id="line" >
+		<use xlink:href="#half-line"/>
+		<use xlink:href="#half-line" transform="scale(1,-1)"/>
+	</g>
+
+	<!-- draw the red edges of gamearea -->
+	<g fill-opacity="0" stroke="black" stroke-width="2">
+		<rect x="-1022" y="-1522" width="2044" height="3044"/>
+		<rect x="-1000" y="-1500" width="2000" height="3000"/>
+	</g>
+
+	<!-- draw the beacons -->
+	<g id="beacons">
+		<!-- ordered -x=>+x and by color -->
+		<use x="-1062" y="-1562"  id="beacon-Y1" xlink:href="#beacon"/>
+		<use x="0"     y="-1562"  id="beacon-Y2" xlink:href="#beacon"/>
+		<use x="1062"  y="-1562"  id="beacon-Y3" xlink:href="#beacon"/>
+
+		<use x="-1062" y="1562"   id="beacon-G1" xlink:href="#beacon"/>
+		<use x="0"     y="1562"   id="beacon-G2" xlink:href="#beacon"/>
+		<use x="1062"  y="1562"   id="beacon-G3" xlink:href="#beacon"/>
+	</g>
+
+	<g id="stands">
+		<!-- all yellow ones, ordered -x=>+x, -y=>+y -->
+		<g fill="#f7b500">
+			<use x="-900" y="-650"  id="stand-Y1" xlink:href="#stand"/>
+			<use x="-800" y="-1410" id="stand-Y2" xlink:href="#stand"/>
+			<use x="-800" y="-650"  id="stand-Y3" xlink:href="#stand"/>
+			<use x="350"  y="-630"  id="stand-Y4" xlink:href="#stand"/>
+			<use x="400"  y="-200"  id="stand-Y5" xlink:href="#stand"/>
+			<use x="750"  y="-1410" id="stand-Y6" xlink:href="#stand"/>
+			<use x="770"  y="-400"  id="stand-Y7" xlink:href="#stand"/>
+			<use x="850"  y="-1410" id="stand-Y8" xlink:href="#stand"/>
+		</g>
+
+		<!-- all green ones, ordered -x=>+x, -y=>+y -->
+		<g fill="#61993b">
+			<use x="-900" y="650"  id="stand-G1" xlink:href="#stand"/>
+			<use x="-800" y="1410" id="stand-G2" xlink:href="#stand"/>
+			<use x="-800" y="650"  id="stand-G3" xlink:href="#stand"/>
+			<use x="350"  y="630"  id="stand-G4" xlink:href="#stand"/>
+			<use x="400"  y="200"  id="stand-G5" xlink:href="#stand"/>
+			<use x="750"  y="1410" id="stand-G6" xlink:href="#stand"/>
+			<use x="770"  y="400"  id="stand-G7" xlink:href="#stand"/>
+			<use x="850"  y="1410" id="stand-G8" xlink:href="#stand"/>
+		</g>
+	</g>
+
+	<g id="cups">
+		<!-- ordered -y=>+y -->
+		<use x="750"  y="-1250" id="cup-1" xlink:href="#cup"/>
+		<use x="-170" y="-590"  id="cup-2" xlink:href="#cup"/>
+		<use x="650"  y="0"     id="cup-3" xlink:href="#cup"/>
+		<use x="-170" y="590"   id="cup-4" xlink:href="#cup"/>
+		<use x="750"  y="1250"  id="cup-5" xlink:href="#cup"/>
+	</g>
+
+	<g id="lights">
+		<!-- ordered -y=>+y -->
+		<use x="0"   y="-1465" id="light-1" xlink:href="#light"/>
+		<use x="950" y="-250"  id="light-2" xlink:href="#light"/>
+		<use x="950" y="250"   id="light-3" xlink:href="#light"/>
+		<use x="0"   y="1465"  id="light-4" xlink:href="#light"/>
+	</g>
+
+	<g id="clapperboards">
+		<!-- ordered -y=>+y -->
+		<use x="1000" y="-1100" id="clapper-Y1" xlink:href="#clapperboard" fill="#f7b500"/>
+		<use x="1000" y="-500"  id="clapper-Y2" xlink:href="#clapperboard" fill="#f7b500"/>
+		<use x="1000" y="-800"  id="clapper-Y3" xlink:href="#clapperboard" fill="#f7b500" transform="scale(1,-1)"/>
+
+		<use x="1000" y="-1100" id="clapper-G1" xlink:href="#clapperboard" fill="#61993b" transform="scale(1,-1)"/>
+		<use x="1000" y="-500"  id="clapper-G2" xlink:href="#clapperboard" fill="#61993b" transform="scale(1,-1)"/>
+		<use x="1000" y="-800"  id="clapper-G3" xlink:href="#clapperboard" fill="#61993b"/>
+	</g>
+
+	<g id="popcorn-machines">
+		<!-- ordered -y=>+y -->
+		<use x="-1000" y="-1200" id="popcorn-machine-1" xlink:href="#popcorn-machine"/>
+		<use x="-1000" y="-900"  id="popcorn-machine-2" xlink:href="#popcorn-machine"/>
+		<use x="-1000" y="900"   id="popcorn-machine-3" xlink:href="#popcorn-machine"/>
+		<use x="-1000" y="1200"  id="popcorn-machine-4" xlink:href="#popcorn-machine"/>
+	</g>
+
+	<g id="popcorns">
+		<use x="-965" y="-1200" id="popcorn-1" xlink:href="#popcorn"/>
+		<use x="-965" y="-900"  id="popcorn-2" xlink:href="#popcorn"/>
+		<use x="-965" y="900"   id="popcorn-3" xlink:href="#popcorn"/>
+		<use x="-965" y="1200"  id="popcorn-4" xlink:href="#popcorn"/>
+	</g>
+</svg>
