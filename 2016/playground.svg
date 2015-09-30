@@ -286,4 +286,111 @@
 		<use x="0" y="-900"  id="hut-theirs-2" xlink:href="#hut" fill="#366735" transform="scale(1,-1)"/>
 	</g>
 
+
+	<!-- mobile game elements -->
+
+	<!-- All sand related things -->
+	<g id="sand">
+		<!-- identifiers ordered -z => +z then -y => +y then -x => +x -->
+		<!-- Note: there is no 'z' element in SVG, we use that internally for 2.5D support -->
+
+		<!-- Z layer 0 -->
+		<!-- the cubes right in front of our starting zone -->
+		<use x="-129" y="-879"  z="0" id="sand-1" xlink:href="#sand-cube"/>
+		<use x="-71"  y="-879"  z="0" id="sand-2" xlink:href="#sand-cube"/>
+		<use x="-129" y="-821"  z="0" id="sand-3" xlink:href="#sand-cube"/>
+		<use x="-71"  y="-821"  z="0" id="sand-4" xlink:href="#sand-cube"/>
+		<!-- the cubes left of the dune -->
+		<use x="-971" y="-649"  z="0" id="sand-5" xlink:href="#sand-cube"/>
+		<use x="-913" y="-649"  z="0" id="sand-6" xlink:href="#sand-cube"/>
+		<use x="-971" y="-591"  z="0" id="sand-7" xlink:href="#sand-cube"/>
+		<use x="-913" y="-591"  z="0" id="sand-8" xlink:href="#sand-cube"/>
+		<!-- the cubes and one cylinder in the middle of the dune -->
+		<use x="-971" y="-232"  z="0" id="sand-9"  xlink:href="#sand-cube"/>
+		<use x="-971" y="-174"  z="0" id="sand-10" xlink:href="#sand-cube"/>
+		<use x="-971" y="-116"  z="0" id="sand-11" xlink:href="#sand-cube"/>
+		<use x="-971" y="-58"   z="0" id="sand-12" xlink:href="#sand-cube"/>
+		<use x="-913" y="-58"   z="0" id="sand-13" xlink:href="#sand-cube"/>
+		<use x="-971" y="0"     z="0" id="sand-14" xlink:href="#sand-cube"/>
+		<use x="-913" y="0"     z="0" id="sand-15" xlink:href="#sand-cube"/>
+		<use x="-855" y="0"     z="0" id="sand-16" xlink:href="#sand-cylinder"/>
+		<use x="-971" y="58"    z="0" id="sand-17" xlink:href="#sand-cube"/>
+		<use x="-913" y="58"    z="0" id="sand-18" xlink:href="#sand-cube"/>
+		<use x="-971" y="116"   z="0" id="sand-19" xlink:href="#sand-cube"/>
+		<use x="-971" y="174"   z="0" id="sand-20" xlink:href="#sand-cube"/>
+		<use x="-971" y="232"   z="0" id="sand-21" xlink:href="#sand-cube"/>
+		<!-- the cubes right of the dune -->
+		<use x="-971" y="591"   z="0" id="sand-22" xlink:href="#sand-cube"/>
+		<use x="-913" y="591"   z="0" id="sand-23" xlink:href="#sand-cube"/>
+		<use x="-971" y="649"   z="0" id="sand-24" xlink:href="#sand-cube"/>
+		<use x="-913" y="649"   z="0" id="sand-25" xlink:href="#sand-cube"/>
+		<!-- the cubes right in front of their starting zone -->
+		<use x="-129" y="821"   z="0" id="sand-26" xlink:href="#sand-cube"/>
+		<use x="-71"  y="821"   z="0" id="sand-27" xlink:href="#sand-cube"/>
+		<use x="-129" y="879"   z="0" id="sand-28" xlink:href="#sand-cube"/>
+		<use x="-71"  y="879"   z="0" id="sand-29" xlink:href="#sand-cube"/>
+
+		<!-- Z layer 1 -->
+		<!-- the cylinder on top of the cubes in front of our starting zone -->
+		<use x="-100" y="-850" z="1" id="sand-30" xlink:href="#sand-cylinder"/>
+		<!-- the cubes on top of the cubes left of the dune -->
+		<use x="-971" y="-649" z="1" id="sand-31" xlink:href="#sand-cube"/>
+		<use x="-913" y="-649" z="1" id="sand-32" xlink:href="#sand-cube"/>
+		<use x="-971" y="-591" z="1" id="sand-33" xlink:href="#sand-cube"/>
+		<use x="-913" y="-591" z="1" id="sand-34" xlink:href="#sand-cube"/>
+		<!-- the cubes and cylinders in the middle of the dune -->
+		<use x="-971" y="-174" z="1" id="sand-35" xlink:href="#sand-cylinder"/>
+		<use x="-971" y="-116" z="1" id="sand-36" xlink:href="#sand-cylinder"/>
+		<use x="-971" y="-58"  z="1" id="sand-37" xlink:href="#sand-cube"/>
+		<use x="-913" y="-58"  z="1" id="sand-38" xlink:href="#sand-cylinder"/>
+		<use x="-971" y="0"    z="1" id="sand-39" xlink:href="#sand-cube"/>
+		<use x="-913" y="0"    z="1" id="sand-40" xlink:href="#sand-cube"/>
+		<use x="-971" y="58"   z="1" id="sand-41" xlink:href="#sand-cube"/>
+		<use x="-913" y="58"   z="1" id="sand-42" xlink:href="#sand-cylinder"/>
+		<use x="-971" y="116"  z="1" id="sand-43" xlink:href="#sand-cylinder"/>
+		<use x="-971" y="174"  z="1" id="sand-44" xlink:href="#sand-cylinder"/>
+		<!-- the cubes on top of the cubes right of the dune -->
+		<use x="-971" y="591"  z="1" id="sand-45" xlink:href="#sand-cube"/>
+		<use x="-913" y="591"  z="1" id="sand-46" xlink:href="#sand-cube"/>
+		<use x="-971" y="649"  z="1" id="sand-47" xlink:href="#sand-cube"/>
+		<use x="-913" y="649"  z="1" id="sand-48" xlink:href="#sand-cube"/>
+		<!-- the cylinder on top of the cubes in front of their starting zone -->
+		<use x="-100" y="850"  z="1" id="sand-49" xlink:href="#sand-cylinder"/>
+
+		<!-- Z layer 2 -->
+		<!-- the cone on top of the cylinder on top of the cubes in front of our starting zone -->
+		<use x="-100" y="-850" z="2" id="sand-50" xlink:href="#sand-cone"/>
+		<!-- the cylinder on top of the cubes left of the dune -->
+		<use x="-942" y="-620" z="2" id="sand-51" xlink:href="#sand-cylinder"/>
+		<!-- the cylinders in the middle of the dune -->
+		<use x="-971" y="-116" z="2" id="sand-52" xlink:href="#sand-cylinder"/>
+		<use x="-971" y="-58"  z="2" id="sand-53" xlink:href="#sand-cylinder"/>
+		<use x="-971" y="0"    z="2" id="sand-54" xlink:href="#sand-cylinder"/>
+		<use x="-913" y="0"    z="2" id="sand-55" xlink:href="#sand-cylinder"/>
+		<use x="-971" y="58"   z="2" id="sand-56" xlink:href="#sand-cylinder"/>
+		<use x="-971" y="116"  z="2" id="sand-57" xlink:href="#sand-cylinder"/>
+		<!-- the cylinder on top of the cubes right of the dune -->
+		<use x="-942" y="620"  z="2" id="sand-58" xlink:href="#sand-cylinder"/>
+		<!-- the cone on top of the cylinder on top of the cubes in front of their starting zone -->
+		<use x="-100" y="850"  z="2" id="sand-59" xlink:href="#sand-cone"/>
+
+		<!-- Z layer 3 -->
+		<!-- the cone on top of the cylinder on top of the cubes left of the dune -->
+		<use x="-942" y="-620" z="3" id="sand-60" xlink:href="#sand-cone"/>
+		<!-- the cones and cylinders in the middle of the dune -->
+		<use x="-971" y="-116" z="3" id="sand-61" xlink:href="#sand-cone"/>
+		<use x="-971" y="-58"  z="3" id="sand-62" xlink:href="#sand-cylinder"/>
+		<use x="-971" y="0"    z="3" id="sand-63" xlink:href="#sand-cylinder"/>
+		<use x="-971" y="58"   z="3" id="sand-64" xlink:href="#sand-cylinder"/>
+		<use x="-971" y="116"  z="3" id="sand-65" xlink:href="#sand-cone"/>
+		<!-- the cone on top of the cylinder on top of the cubes right of the dune -->
+		<use x="-942" y="620"  z="3" id="sand-66" xlink:href="#sand-cone"/>
+
+		<!-- Z layer 4 -->
+		<!-- the cones in the middle of the dune -->
+		<use x="-971" y="-58"  z="4" id="sand-67" xlink:href="#sand-cone"/>
+		<use x="-971" y="0"    z="4" id="sand-68" xlink:href="#sand-cone"/>
+		<use x="-971" y="58"   z="4" id="sand-69" xlink:href="#sand-cone"/>
+	</g>
+
 </svg>
