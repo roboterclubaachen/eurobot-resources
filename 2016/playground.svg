@@ -1,0 +1,217 @@
+<svg version="1.1"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns="http://www.w3.org/2000/svg"
+	width="2500" height="3300"
+	viewBox="-1250 -1650 2500 3300">
+
+	<!--
+		Copyright (c) 2016, Roboterclub Aachen e.V.
+		All rights reserved.
+
+		Redistribution and use in source and binary forms, with or without
+		modification, are permitted provided that the following conditions are met:
+
+		 * Redistributions of source code must retain the above copyright
+		   notice, this list of conditions and the following disclaimer.
+		 * Redistributions in binary form must reproduce the above copyright
+		   notice, this list of conditions and the following disclaimer in the
+		   documentation and/or other materials provided with the distribution.
+		 * Neither the name of the Roboterclub Aachen e.V. nor the
+		   names of its contributors may be used to endorse or promote products
+		   derived from this software without specific prior written permission.
+
+		THIS SOFTWARE IS PROVIDED BY ROBOTERCLUB AACHEN E.V. ''AS IS'' AND ANY
+		EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+		WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+		DISCLAIMED. IN NO EVENT SHALL ROBOTERCLUB AACHEN E.V. BE LIABLE FOR ANY
+		DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+		(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+		LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+		ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+		(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+		SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ 	-->
+
+ 	<title>Eurobot 2016 Game Arena</title>
+
+ 	<!-- The official eurobot colors are:
+		- sky blue:			RAL5015		#007cb0
+		- traffic yellow:	RAL1023		#f7b500
+		- signal violet:	RAL4008		#844c82
+		- emerald green:	RAL6001		#366735
+		- dark black:		RAL9005		#0e0e10
+		- traffic white:	RAL9016		#f1f0ea
+		- pebble grey:		RAL7032		#b5b0a1
+		- daffodil yellow:	RAL1007		#e88c00
+
+		The colors are hardcoded since this significantly speeds up drawing.
+	-->
+	<defs>
+		<!-- beacons are always the same -->
+		<g id="beacon">
+			<!-- drawn so that the origin is in the middle of the beacon -->
+			<rect x="-40" y="-40" width="80" height="80" fill="black"/>
+			<!-- the small gray squares in the corners -->
+			<rect x="-40" y="-40" width="20" height="20" fill="gray"/>
+			<rect x="20" y="-40" width="20" height="20" fill="gray"/>
+			<rect x="20" y="20" width="20" height="20" fill="gray"/>
+			<rect x="-40" y="20" width="20" height="20" fill="gray"/>
+			<!-- the small screws -->
+			<circle cx="-30" cy="-30" r="2.5" stroke="black" stroke-width="1" fill-opacity="0"/>
+			<circle cx="30" cy="-30" r="2.5" stroke="black" stroke-width="1" fill-opacity="0"/>
+			<circle cx="-30" cy="30" r="2.5" stroke="black" stroke-width="1" fill-opacity="0"/>
+			<circle cx="30" cy="30" r="2.5" stroke="black" stroke-width="1" fill-opacity="0"/>
+
+			<!-- the border -->
+			<rect x="-40" y="-40" width="80" height="80" stroke="black" stroke-width="2" fill-opacity="0"/>
+		</g>
+
+		<!-- the start areas are 500x300mm with two white stripes -->
+		<g id="start-area">
+			<rect x="-400" y="-1500" width="500" height="300"/>
+			<rect x="-350" y="-1500" width="50" height="300" fill="#f1f0ea"/>
+			<rect x="0" y="-1500" width="50" height="300" fill="#f1f0ea"/>
+		</g>
+
+		<!-- the rocks are two quarter circles with radius 150mm and 250mm -->
+		<path id="rock" stroke="black" stroke-width="1" fill="#b5b0a1" d="
+			M750,-1500
+			A250,250 0 0 0 1000 -1250
+			L1000,-1500
+			Z
+			M850,-1500
+			A150,150 0 0 0 1000 -1350
+			"/>
+
+		<!-- the fish net pattern consisting of only a cross -->
+		<pattern id="net" x="1022" y="0" width="70" height="55" stroke="black" stroke-width="6" patternUnits="userSpaceOnUse">
+			<line x1="0" y1="0" x2="70" y2="55"/>
+			<line x1="0" y1="55" x2="70" y2="0"/>
+		</pattern>
+		<!-- the holder includes the two holder structures and the net pattern -->
+		<g id="net-holder" stroke="black" stroke-width="1">
+			<rect x="1022" y="-550" width="210" height="1100" stroke-width="0" fill="url(#net)"/>
+			<line x1="1229" y1="-550" x2="1229" y2="550" stroke-width="6"/>
+			<rect x="978" y="550" width="254" height="22" fill="#007cb0"/>
+			<rect x="978" y="-572" width="254" height="22" fill="#007cb0"/>
+		</g>
+
+		<!-- the water tank walls are 5mm acryllic and it is filled with water -->
+		<g id="water-tank" stroke="black" stroke-width="1">
+			<rect x="1022" y="-1002" width="210" height="410" fill-opacity="0"/>
+			<rect x="1027" y="-997" width="200" height="400" fill="blue" fill-opacity="0.15"/>
+		</g>
+
+		<g id="dune-area" stroke="black" stroke-width="1">
+			<rect x="-1022" y="0" width="22" height="700" fill="#e88c00"/>
+			<rect x="-1022" y="-700" width="22" height="700" fill="#f7b500"/>
+
+			<rect x="-1000" y="678" width="200" height="22" fill="#e88c00"/>
+			<rect x="-1000" y="-700" width="200" height="22" fill="#e88c00"/>
+		</g>
+
+		<!-- origin (-250, 0) -->
+		<g id="windbreaker" stroke="black" stroke-width="1">
+			<!-- the filled circumfence -->
+			<path stroke-width="0" d="
+				M-250,-600
+				A600,600 0 0 1 350 0
+				L330,0
+				A580,580 0 0 0 -250 -580
+				Z
+				"/>
+			<!-- Rod No. 1 -->
+			<rect x="-250" y="-600" width="22" height="576" fill="#e88c00"/>
+			<!-- Rod No. 2 -->
+			<rect x="-228" y="-24" width="556" height="22" fill="#e88c00"/>
+			<!-- Lines for Rods No. 3 -->
+			<line x1="-206" y1="-24" x2="-206" y2="-2"/>
+			<line x1="306" y1="-24" x2="306" y2="-2"/>
+
+			<!-- Fills for Rods No. 5 -->
+			<rect x="-250" y="-24" width="22" height="25" stroke-width="0" fill="#e88c00"/>
+			<rect x="328" y="-24" width="22" height="25" stroke-width="0" fill="#e88c00"/>
+			<!-- Lines for Rods No. 5 -->
+			<path fill="#e88c00" d="
+				M-250,1
+				L-250,-24
+				L-228,-24
+				L-228,1
+				M328,1
+				L328,-24
+				L350,-24
+				L350,1
+				"/>
+		</g>
+
+		<!-- origin (-1000, 0), as well as centered on y-axis -->
+		<g id="hut" stroke="black" stroke-width="1">
+			<rect x="-250" y="-600" width="22" height="576" fill="#e88c00"/>
+			<rect x="-228" y="-24" width="556" height="22" fill="#e88c00"/>
+		</g>
+
+	</defs>
+
+	<!-- Our internal coordinate system is:
+
+		- the origin is in the center of the game area
+		- x axis: goes from the dune to the ocean from negative to positive (left to right)
+		- y axis: goes from the violet to green start area from negative to positive (down to up)
+	-->
+
+	<!-- yellow game area including border -->
+	<rect x="-1022" y="-1522" width="2044" height="3044" fill="#f7b500"/>
+	<!-- blue game area including border:
+		- small circle: origin (550, ±900) with radius 350
+	 	- big circle: origin (-650, 0) with radius 1150
+		Collision points: (270, ±690)
+	-->
+	<path fill="#007cb0" d="
+		M+200,-1522
+		L+200,-900
+		A350,350   0 0 0 270,-690
+		A1150,1150 0 0 1 270,+690
+		A350,350   0 0 0 200,+900
+		L+200,+1522
+		L+1022,+1522
+		L+1022,-1522
+		Z
+	"/>
+
+	<use id="rock-ours" xlink:href="#rock"/>
+	<use id="rock-theirs" xlink:href="#rock" transform="scale(1,-1)"/>
+
+	<use id="start-area-ours" xlink:href="#start-area" fill="#844c82"/>
+	<use id="start-area-theirs" xlink:href="#start-area" fill="#366735" transform="scale(1,-1)"/>
+
+	<use id="windbreaker-ours" xlink:href="#windbreaker" fill="#844c82"/>
+	<use id="windbreaker-theirs" xlink:href="#windbreaker" fill="#366735" transform="scale(1,-1)"/>
+
+	<use id="dune" xlink:href="#dune-area"/>
+
+	<!-- draw the borders of the game area -->
+	<g fill-opacity="0" stroke="black" stroke-width="2">
+		<rect x="-1022" y="-1522" width="2044" height="3044"/>
+		<rect x="-1000" y="-1500" width="2000" height="3000"/>
+	</g>
+
+	<!-- draw the beacons -->
+	<g id="beacons">
+		<!-- ordered -x=>+x and by color -->
+		<use x="-1062" y="-1562"  id="beacon-ours-1" xlink:href="#beacon"/>
+		<use x="0"     y="-1562"  id="beacon-ours-2" xlink:href="#beacon"/>
+		<use x="1062"  y="-1562"  id="beacon-ours-3" xlink:href="#beacon"/>
+
+		<use x="-1062" y="1562"   id="beacon-theirs-1" xlink:href="#beacon"/>
+		<use x="0"     y="1562"   id="beacon-theirs-2" xlink:href="#beacon"/>
+		<use x="1062"  y="1562"   id="beacon-theirs-3" xlink:href="#beacon"/>
+	</g>
+
+	<!-- draw the fish net -->
+	<use id="fish-net" xlink:href="#net-holder"/>
+
+	<!-- draw the fish net -->
+	<use id="fish-tank-ours" xlink:href="#water-tank"/>
+	<use id="fish-tank-theirs" xlink:href="#water-tank" transform="scale(1,-1)"/>
+
+</svg>
