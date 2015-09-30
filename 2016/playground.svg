@@ -52,10 +52,10 @@
 			<!-- drawn so that the origin is in the middle of the beacon -->
 			<rect x="-40" y="-40" width="80" height="80" fill="black"/>
 			<!-- the small gray squares in the corners -->
-			<rect x="-40" y="-40" width="20" height="20" fill="gray"/>
-			<rect x="20" y="-40" width="20" height="20" fill="gray"/>
-			<rect x="20" y="20" width="20" height="20" fill="gray"/>
-			<rect x="-40" y="20" width="20" height="20" fill="gray"/>
+			<rect x="-40" y="-40" width="20" height="20"/>
+			<rect x="20" y="-40" width="20" height="20"/>
+			<rect x="20" y="20" width="20" height="20"/>
+			<rect x="-40" y="20" width="20" height="20"/>
 			<!-- the small screws -->
 			<circle cx="-30" cy="-30" r="2.5" stroke="black" stroke-width="1" fill-opacity="0"/>
 			<circle cx="30" cy="-30" r="2.5" stroke="black" stroke-width="1" fill-opacity="0"/>
@@ -261,13 +261,13 @@
 	<!-- draw the beacons -->
 	<g id="beacons">
 		<!-- ordered -x=>+x and by color -->
-		<use x="-1062" y="-1562"  id="beacon-ours-1" xlink:href="#beacon"/>
-		<use x="0"     y="-1562"  id="beacon-ours-2" xlink:href="#beacon"/>
-		<use x="1062"  y="-1562"  id="beacon-ours-3" xlink:href="#beacon"/>
+		<use x="-1062" y="1562"  id="beacon-ours-1" xlink:href="#beacon" fill="#844c82"/>
+		<use x="0"     y="-1562" id="beacon-ours-2" xlink:href="#beacon" fill="#844c82"/>
+		<use x="1062"  y="1562"  id="beacon-ours-3" xlink:href="#beacon" fill="#844c82"/>
 
-		<use x="-1062" y="1562"   id="beacon-theirs-1" xlink:href="#beacon"/>
-		<use x="0"     y="1562"   id="beacon-theirs-2" xlink:href="#beacon"/>
-		<use x="1062"  y="1562"   id="beacon-theirs-3" xlink:href="#beacon"/>
+		<use x="-1062" y="-1562" id="beacon-theirs-1" xlink:href="#beacon" fill="#366735"/>
+		<use x="0"     y="1562"  id="beacon-theirs-2" xlink:href="#beacon" fill="#366735"/>
+		<use x="1062"  y="-1562" id="beacon-theirs-3" xlink:href="#beacon" fill="#366735"/>
 	</g>
 
 	<!-- draw the fish net -->
