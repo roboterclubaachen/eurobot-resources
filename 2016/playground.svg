@@ -405,34 +405,34 @@
 		<!-- identifiers ordered by position card then -y => +y then -x => +x -->
 		<g> <!-- all available position -->
 			<!-- our rocks -->
-			<use x="935" y="-1435" id="seashell-1" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="820" y="-1410" id="seashell-2" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="910" y="-1320" id="seashell-3" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="935" y="-1435" z="2" id="seashell-1"  xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="820" y="-1410" z="1" id="seashell-2"  xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="910" y="-1320" z="1" id="seashell-3"  xlink:href="#seashell" fill="#f1f0ea"/>
 			<!-- right of our start area -->
-			<use x="250" y="-1300" id="seashell-4" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="550" y="-1300" id="seashell-5" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="250" y="-1300" z="0" id="seashell-4"  xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="550" y="-1300" z="0" id="seashell-5"  xlink:href="#seashell" fill="#f1f0ea"/>
 			<!-- top right of our start area -->
-			<use x="250" y="-800"  id="seashell-6" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="550" y="-800"  id="seashell-7" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="250" y="-800"  z="0" id="seashell-6"  xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="550" y="-800"  z="0" id="seashell-7"  xlink:href="#seashell" fill="#f1f0ea"/>
 			<!-- diagonal top right of our start area -->
-			<use x="450" y="-600"  id="seashell-8" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="650" y="-300"  id="seashell-9" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="450" y="-600"  z="0" id="seashell-8"  xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="650" y="-300"  z="0" id="seashell-9"  xlink:href="#seashell" fill="#f1f0ea"/>
 			<!-- the middle -->
-			<use x="550" y="0"     id="seashell-10" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="850" y="0"     id="seashell-11" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="550" y="0"     z="0" id="seashell-10" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="850" y="0"     z="0" id="seashell-11" xlink:href="#seashell" fill="#f1f0ea"/>
 			<!-- diagonal top left of their start area -->
-			<use x="650" y="300"  id="seashell-9" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="450" y="600"  id="seashell-8" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="650" y="300"   z="0" id="seashell-12" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="450" y="600"   z="0" id="seashell-13" xlink:href="#seashell" fill="#f1f0ea"/>
 			<!-- top left of their start area -->
-			<use x="250" y="800"   id="seashell-14" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="550" y="800"   id="seashell-15" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="250" y="800"   z="0" id="seashell-14" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="550" y="800"   z="0" id="seashell-15" xlink:href="#seashell" fill="#f1f0ea"/>
 			<!-- left of their start area -->
-			<use x="250" y="1300"  id="seashell-16" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="550" y="1300"  id="seashell-17" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="250" y="1300"  z="0" id="seashell-16" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="550" y="1300"  z="0" id="seashell-17" xlink:href="#seashell" fill="#f1f0ea"/>
 			<!-- their rocks -->
-			<use x="910" y="1320"  id="seashell-18" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="820" y="1410"  id="seashell-19" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="935" y="1435"  id="seashell-20" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="910" y="1320"  z="1" id="seashell-18" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="820" y="1410"  z="1" id="seashell-19" xlink:href="#seashell" fill="#f1f0ea"/>
+			<use x="935" y="1435"  z="2" id="seashell-20" xlink:href="#seashell" fill="#f1f0ea"/>
 		</g>
 	</switch>
 
