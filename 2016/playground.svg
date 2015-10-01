@@ -100,7 +100,7 @@
 
 		<!-- the water tank walls are 5mm acryllic and it is filled with water -->
 		<g id="water-tank" stroke="black" stroke-width="1">
-			<rect x="1022" y="-1002" width="210" height="410" fill-opacity="0"/>
+			<rect x="1022" y="-1002" width="210" height="410" fill="white"/>
 			<rect x="1027" y="-997" width="200" height="400" fill="blue" fill-opacity="0.15"/>
 		</g>
 
@@ -217,6 +217,39 @@
 			<circle r="38.1"/>
 			<rect x="-2" y="-30" width="4" height="60"/>
 		</g>
+
+		<!-- aliases to all seashell positions -->
+		<!-- our rocks -->
+		<use x="935" y="-1435" z="2" id="seashell-1"  xlink:href="#seashell"/>
+		<use x="815" y="-1420" z="1" id="seashell-2"  xlink:href="#seashell"/>
+		<use x="920" y="-1315" z="1" id="seashell-3"  xlink:href="#seashell"/>
+		<!-- right of our start area -->
+		<use x="250" y="-1300" z="0" id="seashell-4"  xlink:href="#seashell"/>
+		<use x="550" y="-1300" z="0" id="seashell-5"  xlink:href="#seashell"/>
+		<!-- top right of our start area -->
+		<use x="250" y="-800"  z="0" id="seashell-6"  xlink:href="#seashell"/>
+		<use x="550" y="-800"  z="0" id="seashell-7"  xlink:href="#seashell"/>
+		<use x="850" y="-800"  z="0" id="seashell-8"  xlink:href="#seashell" fill="#f1f0ea"/>
+		<!-- diagonal top right of our start area -->
+		<use x="450" y="-600"  z="0" id="seashell-9"  xlink:href="#seashell"/>
+		<use x="650" y="-300"  z="0" id="seashell-10" xlink:href="#seashell"/>
+		<!-- the middle -->
+		<use x="550" y="0"     z="0" id="seashell-11" xlink:href="#seashell" fill="#f1f0ea"/>
+		<use x="850" y="0"     z="0" id="seashell-12" xlink:href="#seashell" fill="#f1f0ea"/>
+		<!-- diagonal top left of their start area -->
+		<use x="650" y="300"   z="0" id="seashell-13" xlink:href="#seashell"/>
+		<use x="450" y="600"   z="0" id="seashell-14" xlink:href="#seashell"/>
+		<!-- top left of their start area -->
+		<use x="250" y="800"   z="0" id="seashell-15" xlink:href="#seashell"/>
+		<use x="550" y="800"   z="0" id="seashell-16" xlink:href="#seashell"/>
+		<use x="850" y="800"   z="0" id="seashell-17" xlink:href="#seashell" fill="#f1f0ea"/>
+		<!-- left of their start area -->
+		<use x="250" y="1300"  z="0" id="seashell-18" xlink:href="#seashell"/>
+		<use x="550" y="1300"  z="0" id="seashell-19" xlink:href="#seashell"/>
+		<!-- their rocks -->
+		<use x="920" y="1315"  z="1" id="seashell-20" xlink:href="#seashell"/>
+		<use x="815" y="1420"  z="1" id="seashell-21" xlink:href="#seashell"/>
+		<use x="935" y="1435"  z="2" id="seashell-22" xlink:href="#seashell"/>
 
 
 	</defs>
@@ -400,39 +433,161 @@
 	</g>
 
 	<!-- she sells sea shells on the seashore -->
-	<!-- we use the system language to switch between the 5+1 position cards -->
+	<!-- we use the system language to switch between the 5 position cards -->
+	<!-- The language tags were chosen for hilarity and are:
+		- Card #1: ha
+		- Card #2: he
+		- Card #3: hi
+		- Card #4: ho
+		- Card #5: hr
+		The typical non-exotic audience will however just see the default
+		Card #6 which paints a seashell in all possible positions.
+	-->
 	<switch>
-		<!-- identifiers ordered by position card then -y => +y then -x => +x -->
-		<g> <!-- all available position -->
-			<!-- our rocks -->
-			<use x="935" y="-1435" z="2" id="seashell-1"  xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="820" y="-1410" z="1" id="seashell-2"  xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="910" y="-1320" z="1" id="seashell-3"  xlink:href="#seashell" fill="#f1f0ea"/>
-			<!-- right of our start area -->
-			<use x="250" y="-1300" z="0" id="seashell-4"  xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="550" y="-1300" z="0" id="seashell-5"  xlink:href="#seashell" fill="#f1f0ea"/>
-			<!-- top right of our start area -->
-			<use x="250" y="-800"  z="0" id="seashell-6"  xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="550" y="-800"  z="0" id="seashell-7"  xlink:href="#seashell" fill="#f1f0ea"/>
-			<!-- diagonal top right of our start area -->
-			<use x="450" y="-600"  z="0" id="seashell-8"  xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="650" y="-300"  z="0" id="seashell-9"  xlink:href="#seashell" fill="#f1f0ea"/>
-			<!-- the middle -->
-			<use x="550" y="0"     z="0" id="seashell-10" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="850" y="0"     z="0" id="seashell-11" xlink:href="#seashell" fill="#f1f0ea"/>
-			<!-- diagonal top left of their start area -->
-			<use x="650" y="300"   z="0" id="seashell-12" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="450" y="600"   z="0" id="seashell-13" xlink:href="#seashell" fill="#f1f0ea"/>
-			<!-- top left of their start area -->
-			<use x="250" y="800"   z="0" id="seashell-14" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="550" y="800"   z="0" id="seashell-15" xlink:href="#seashell" fill="#f1f0ea"/>
-			<!-- left of their start area -->
-			<use x="250" y="1300"  z="0" id="seashell-16" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="550" y="1300"  z="0" id="seashell-17" xlink:href="#seashell" fill="#f1f0ea"/>
-			<!-- their rocks -->
-			<use x="910" y="1320"  z="1" id="seashell-18" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="820" y="1410"  z="1" id="seashell-19" xlink:href="#seashell" fill="#f1f0ea"/>
-			<use x="935" y="1435"  z="2" id="seashell-20" xlink:href="#seashell" fill="#f1f0ea"/>
+		<!-- Card #1 -->
+		<g systemLanguage="ha"> <!-- Hausa -->
+			<use id="seashell-ours-1"   xlink:href="#seashell-1"  fill="#844c82"/>
+			<use id="seashell-ours-2"   xlink:href="#seashell-2"  fill="#844c82"/>
+			<use id="seashell-ours-3"   xlink:href="#seashell-3"  fill="#844c82"/>
+
+			<use id="seashell-anys-1"   xlink:href="#seashell-4"  fill="#f1f0ea"/>
+			<use id="seashell-anys-2"   xlink:href="#seashell-5"  fill="#f1f0ea"/>
+
+			<use id="seashell-ours-4"   xlink:href="#seashell-9"  fill="#844c82"/>
+			<use id="seashell-theirs-1" xlink:href="#seashell-10" fill="#366735"/>
+			<use id="seashell-anys-1"   xlink:href="#seashell-11"/>
+			<use id="seashell-anys-2"   xlink:href="#seashell-12"/>
+			<use id="seashell-ours-5"   xlink:href="#seashell-13" fill="#844c82"/>
+			<use id="seashell-theirs-2" xlink:href="#seashell-14" fill="#366735"/>
+
+			<use id="seashell-anys-3"   xlink:href="#seashell-18" fill="#f1f0ea"/>
+			<use id="seashell-anys-4"   xlink:href="#seashell-19" fill="#f1f0ea"/>
+
+			<use id="seashell-theirs-3" xlink:href="#seashell-20" fill="#366735"/>
+			<use id="seashell-theirs-4" xlink:href="#seashell-21" fill="#366735"/>
+			<use id="seashell-theirs-5" xlink:href="#seashell-22" fill="#366735"/>
+		</g>
+		<!-- Card #2 -->
+		<g systemLanguage="he"> <!-- Hebrew -->
+			<use id="seashell-anys-1"   xlink:href="#seashell-1"  fill="#f1f0ea"/>
+			<use id="seashell-ours-1"   xlink:href="#seashell-2"  fill="#844c82"/>
+			<use id="seashell-ours-2"   xlink:href="#seashell-3"  fill="#844c82"/>
+
+			<use id="seashell-ours-3"   xlink:href="#seashell-4"  fill="#844c82"/>
+			<use id="seashell-anys-2"   xlink:href="#seashell-5"  fill="#f1f0ea"/>
+
+			<use id="seashell-ours-4"   xlink:href="#seashell-9"  fill="#844c82"/>
+			<use id="seashell-ours-5"   xlink:href="#seashell-10" fill="#844c82"/>
+			<use id="seashell-anys-1"   xlink:href="#seashell-11"/>
+			<use id="seashell-anys-2"   xlink:href="#seashell-12"/>
+			<use id="seashell-theirs-1" xlink:href="#seashell-13" fill="#366735"/>
+			<use id="seashell-theirs-2" xlink:href="#seashell-14" fill="#366735"/>
+
+			<use id="seashell-theirs-3" xlink:href="#seashell-18" fill="#366735"/>
+			<use id="seashell-anys-3"   xlink:href="#seashell-19" fill="#f1f0ea"/>
+
+			<use id="seashell-theirs-4" xlink:href="#seashell-20" fill="#366735"/>
+			<use id="seashell-theirs-5" xlink:href="#seashell-21" fill="#366735"/>
+			<use id="seashell-anys-4"   xlink:href="#seashell-22" fill="#f1f0ea"/>
+		</g>
+		<!-- Card #3 -->
+		<g systemLanguage="hi"> <!-- Hindi -->
+			<use id="seashell-anys-1"   xlink:href="#seashell-1"  fill="#f1f0ea"/>
+			<use id="seashell-ours-1"   xlink:href="#seashell-2"  fill="#844c82"/>
+			<use id="seashell-ours-2"   xlink:href="#seashell-3"  fill="#844c82"/>
+
+			<use id="seashell-ours-3"   xlink:href="#seashell-4"  fill="#844c82"/>
+			<use id="seashell-anys-2"   xlink:href="#seashell-5"  fill="#f1f0ea"/>
+
+			<use id="seashell-ours-4"   xlink:href="#seashell-6"  fill="#844c82"/>
+			<use id="seashell-anys-3"   xlink:href="#seashell-7"  fill="#f1f0ea"/>
+
+			<use id="seashell-ours-5"   xlink:href="#seashell-10" fill="#844c82"/>
+			<use id="seashell-theirs-1" xlink:href="#seashell-13" fill="#366735"/>
+
+			<use id="seashell-theirs-2" xlink:href="#seashell-15" fill="#366735"/>
+			<use id="seashell-anys-4"   xlink:href="#seashell-16" fill="#f1f0ea"/>
+
+			<use id="seashell-theirs-3" xlink:href="#seashell-18" fill="#366735"/>
+			<use id="seashell-anys-5"   xlink:href="#seashell-19" fill="#f1f0ea"/>
+
+			<use id="seashell-theirs-4" xlink:href="#seashell-20" fill="#366735"/>
+			<use id="seashell-theirs-5" xlink:href="#seashell-21" fill="#366735"/>
+			<use id="seashell-anys-6"   xlink:href="#seashell-22" fill="#f1f0ea"/>
+		</g>
+		<!-- Card #4 -->
+		<g systemLanguage="ho"> <!-- Hiri Motu -->
+			<use id="seashell-anys-1"   xlink:href="#seashell-1"  fill="#f1f0ea"/>
+			<use id="seashell-theirs-1" xlink:href="#seashell-2"  fill="#366735"/>
+			<use id="seashell-theirs-2" xlink:href="#seashell-3"  fill="#366735"/>
+
+			<use id="seashell-ours-1"   xlink:href="#seashell-4"  fill="#844c82"/>
+			<use id="seashell-ours-2"   xlink:href="#seashell-5"  fill="#844c82"/>
+
+			<use id="seashell-ours-3"   xlink:href="#seashell-6"  fill="#844c82"/>
+			<use id="seashell-anys-2"   xlink:href="#seashell-7"  fill="#f1f0ea"/>
+
+			<use id="seashell-anys-3"   xlink:href="#seashell-10" fill="#f1f0ea"/>
+			<use id="seashell-anys-4"   xlink:href="#seashell-13" fill="#f1f0ea"/>
+
+			<use id="seashell-theirs-3" xlink:href="#seashell-15" fill="#366735"/>
+			<use id="seashell-anys-5"   xlink:href="#seashell-16" fill="#f1f0ea"/>
+
+			<use id="seashell-theirs-4" xlink:href="#seashell-18" fill="#366735"/>
+			<use id="seashell-theirs-5" xlink:href="#seashell-19" fill="#366735"/>
+
+			<use id="seashell-ours-4"   xlink:href="#seashell-20" fill="#844c82"/>
+			<use id="seashell-ours-5"   xlink:href="#seashell-21" fill="#844c82"/>
+			<use id="seashell-anys-6"   xlink:href="#seashell-22" fill="#f1f0ea"/>
+		</g>
+		<!-- Card #5 -->
+		<g systemLanguage="hr"> <!-- Croatian -->
+			<use id="seashell-anys-1"   xlink:href="#seashell-1"  fill="#f1f0ea"/>
+			<use id="seashell-ours-1"   xlink:href="#seashell-2"  fill="#844c82"/>
+			<use id="seashell-anys-2"   xlink:href="#seashell-3"  fill="#f1f0ea"/>
+
+			<use id="seashell-ours-2"   xlink:href="#seashell-4"  fill="#844c82"/>
+			<use id="seashell-ours-3"   xlink:href="#seashell-5"  fill="#844c82"/>
+
+			<use id="seashell-ours-4"   xlink:href="#seashell-6"  fill="#844c82"/>
+			<use id="seashell-theirs-1" xlink:href="#seashell-7"  fill="#366735"/>
+			<use id="seashell-anys-3"   xlink:href="#seashell-8" fill="#f1f0ea"/>
+
+			<use id="seashell-theirs-2" xlink:href="#seashell-15" fill="#366735"/>
+			<use id="seashell-ours-5"   xlink:href="#seashell-16" fill="#844c82"/>
+			<use id="seashell-anys-4"   xlink:href="#seashell-17" fill="#f1f0ea"/>
+
+			<use id="seashell-theirs-3" xlink:href="#seashell-18" fill="#366735"/>
+			<use id="seashell-theirs-4" xlink:href="#seashell-19" fill="#366735"/>
+
+			<use id="seashell-anys-5"   xlink:href="#seashell-20" fill="#f1f0ea"/>
+			<use id="seashell-theirs-5" xlink:href="#seashell-21" fill="#366735"/>
+			<use id="seashell-anys-6"   xlink:href="#seashell-22" fill="#f1f0ea"/>
+		</g>
+		<!-- Card #6 showing all possible positions -->
+		<g>
+			<use xlink:href="#seashell-1" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-2" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-3" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-4" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-5" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-6" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-7" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-8" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-9" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-10" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-11" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-12" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-13" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-14" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-15" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-16" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-17" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-18" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-19" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-20" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-21" fill="#f1f0ea"/>
+			<use xlink:href="#seashell-22" fill="#f1f0ea"/>
 		</g>
 	</switch>
 
