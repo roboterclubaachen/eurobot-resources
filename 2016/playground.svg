@@ -41,7 +41,7 @@
 		- emerald green:	RAL6001		#366735
 		- dark black:		RAL9005		#0e0e10
 		- traffic white:	RAL9016		#f1f0ea
-		- pebble grey:		RAL7032		#b5b0a1
+		- pebble gray:		RAL7032		#b5b0a1
 		- daffodil yellow:	RAL1007		#e88c00
 
 		The colors are hardcoded since this significantly speeds up drawing.
@@ -229,7 +229,7 @@
 				A50,50 0 0 0 -41 -5
 				"/>
 			<rect x="-41" y="-5" width="82" height="10"/>
-			<rect x="-2" y="-69" width="4" height="138" stroke-width="1" fill="grey"/>
+			<rect x="-2" y="-69" width="4" height="138" stroke-width="1" fill="gray"/>
 		</g>
 
 		<!-- aliases to all seashell positions -->
