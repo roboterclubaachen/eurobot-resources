@@ -218,6 +218,20 @@
 			<rect x="-2" y="-30" width="4" height="60"/>
 		</g>
 
+		<!-- fish -->
+		<g id="fish" stroke="black" stroke-width="2">
+			<path d="
+				M-41,5
+				A50,50 0 0 0 41 5
+				L56,5
+				L56,-5
+				L41,-5
+				A50,50 0 0 0 -41 -5
+				"/>
+			<rect x="-41" y="-5" width="82" height="10"/>
+			<rect x="-2" y="-69" width="4" height="138" stroke-width="1" fill="grey"/>
+		</g>
+
 		<!-- aliases to all seashell positions -->
 		<!-- our rocks -->
 		<use x="935" y="-1435" z="2" id="seashell-1"  xlink:href="#seashell"/>
@@ -327,6 +341,20 @@
 
 
 	<!-- mobile game elements -->
+
+	<!-- how much is the fish? -->
+	<g id="fish">
+		<!-- our fish -->
+		<use x="1160" y="-915" id="fish-ours-1" xlink:href="#fish" fill="#844c82"/>
+		<use x="1080" y="-835" id="fish-ours-2" xlink:href="#fish" fill="#844c82"/>
+		<use x="1160" y="-755" id="fish-ours-3" xlink:href="#fish" fill="#844c82"/>
+		<use x="1080" y="-675" id="fish-ours-4" xlink:href="#fish" fill="#844c82"/>
+		<!-- their fish -->
+		<use x="1080" y="675"  id="fish-theirs-1" xlink:href="#fish" fill="#366735"/>
+		<use x="1160" y="755"  id="fish-theirs-2" xlink:href="#fish" fill="#366735"/>
+		<use x="1080" y="835"  id="fish-theirs-3" xlink:href="#fish" fill="#366735"/>
+		<use x="1160" y="915"  id="fish-theirs-4" xlink:href="#fish" fill="#366735"/>
+	</g>
 
 	<!-- All sand related things -->
 	<g id="sand">
@@ -443,7 +471,7 @@
 		The typical non-exotic audience will however just see the default
 		Card #6 which paints a seashell in all possible positions.
 	-->
-	<switch>
+	<switch id="seashells">
 		<!-- Card #1 -->
 		<g systemLanguage="ha"> <!-- Hausa -->
 			<use id="seashell-ours-1"   xlink:href="#seashell-1"  fill="#844c82"/>
