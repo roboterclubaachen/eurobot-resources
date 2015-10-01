@@ -5,7 +5,7 @@
 	viewBox="-1250 -1650 2500 3300">
 
 	<!--
-		Copyright (c) 2016, Roboterclub Aachen e.V.
+		Copyright (c) 2015-2016, Roboterclub Aachen e.V.
 		All rights reserved.
 
 		Redistribution and use in source and binary forms, with or without
@@ -343,7 +343,7 @@
 	<!-- mobile game elements -->
 
 	<!-- how much is the fish? -->
-	<g id="fish">
+	<g id="fishs">
 		<!-- our fish -->
 		<use x="1160" y="-915" id="fish-ours-1" xlink:href="#fish" fill="#844c82"/>
 		<use x="1080" y="-835" id="fish-ours-2" xlink:href="#fish" fill="#844c82"/>
