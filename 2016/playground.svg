@@ -73,6 +73,41 @@
 			<rect x="0" y="-1500" width="50" height="300" fill="#f1f0ea"/>
 		</g>
 
+		<!-- the dolphin ground painting -->
+		<g id="delphin">
+			<path stroke="#0e0e10" fill-opacity="0" stroke-width="20" d="
+				M458 507
+				A329,329   0 0 0 496.6 536
+				A7.7,7.7   0 0 0 506.3 532.4
+				A80,80     0 0 0 510 455
+				"/>
+			<path stroke="#f7b500" fill-opacity="0" stroke-width="20" d="
+				M436.5 518
+				A324,324   0 0 0 525 430
+				"/>
+			<path stroke="#0e0e10" fill-opacity="0" stroke-width="20" d="
+				M265,300
+				A180,180   0 0 0 256 495
+				A128,128   0 0 0 250 552
+				A51,51     0 0 0 296 591
+				A231,231   0 0 0 366 535
+				A325,325   0 0 0 549 337
+				A162,162   0 0 0 684 212
+				A180,180   0 0 1 562 245
+				A189,189   0 0 0 264 126
+				A466,466   0 0 0 143 55
+				A10.5,10.5 0 0 0 131 69
+				A2045,2045 1 0 0 222 171
+				A463,463   0 0 1 123 334
+				A98,98     0 0 0 32 310
+				A24,24     0 0 0 26.5 335
+				A250,250   0 0 1 16 552
+				A23,23     0 0 0 53 574
+				A171,171   0 0 0 138.6 438.6
+				A145,145   0 0 1 231.6 405
+				"/>
+			</g>
+
 		<!-- static game elements -->
 
 		<!-- the rocks are two quarter circles with radius 150mm and 250mm -->
@@ -85,7 +120,7 @@
 			A150,150 0 0 0 1000 -1350
 			"/>
 
-		<!-- the fish net pattern consisting of only a cross -->
+		<!-- the fish net pattern consisting of only a diagonal cross -->
 		<pattern id="net" x="1022" y="0" width="70" height="55" stroke="black" stroke-width="6" patternUnits="userSpaceOnUse">
 			<line x1="0" y1="0" x2="70" y2="55"/>
 			<line x1="0" y1="55" x2="70" y2="0"/>
@@ -296,6 +331,9 @@
 
 	<use id="rock-ours" xlink:href="#rock"/>
 	<use id="rock-theirs" xlink:href="#rock" transform="scale(1,-1)"/>
+
+	<use id="our-delphin"   xlink:href="#delphin" transform="translate(-1000,-1500)"/>
+	<use id="their-delphin" xlink:href="#delphin" transform="translate(-1000,+1500) scale(1,-1)"/>
 
 	<use id="start-area-ours" xlink:href="#start-area" fill="#844c82"/>
 	<use id="start-area-theirs" xlink:href="#start-area" fill="#366735" transform="scale(1,-1)"/>
