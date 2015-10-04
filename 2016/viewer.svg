@@ -1,7 +1,7 @@
 <svg version="1.1"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns="http://www.w3.org/2000/svg"
-	width="825" height="700">
+	width="625" height="825">
 
 	<!--
 		Copyright (c) 2015, Roboterclub Aachen e.V.
@@ -47,8 +47,7 @@
 		This is since most webbrowsers clip the SVG viewbox apparently at origin (0,0) and therefore a negative viewbox
 		origin is not displayed. We also scale and rotate there for easier viewing.
 	-->
-	<g transform="scale(0.25) rotate(90) scale(1,-1)">
-	<!-- <g transform="scale(0.15) translate(0,3300) scale(1,-1)"> -->
+	<g transform="scale(0.25) translate(-100,3300) scale(1,-1)">
 		<image x="0" y="0" width="2500" height="3300" xlink:href="playground.svg"/>
 	</g>
 </svg>

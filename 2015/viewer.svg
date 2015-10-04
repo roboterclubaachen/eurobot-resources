@@ -1,9 +1,9 @@
 <svg version="1.1"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns="http://www.w3.org/2000/svg"
-	width="825" height="575">
+	width="575" height="825">
 
-	<!-- 
+	<!--
 		Copyright (c) 2015, Roboterclub Aachen e.V.
 		All rights reserved.
 
@@ -42,12 +42,12 @@
 		Please note that the y-axis polarity is the opposite of the typical graphics drawing coordinate system.
 		Since we want the x and y positions of the elements to the in our internal coordinate system,
 		we need to flip the y-axis around the x-axis.
-	
+
 		In order to see the entire SVG in a we browser we must also translate the entire SVG into positive coordinates.
 		This is since most webbrowsers clip the SVG viewbox apparently at origin (0,0) and therefore a negative viewbox
 		origin is not displayed. We also scale and rotate there for easier viewing.
 	-->
-	<g transform="scale(0.25) rotate(90) scale(1,-1)">
+	<g transform="scale(0.25) translate(0,3300) scale(1,-1)">
 		<image x="0" y="0" width="2300" height="3300" xlink:href="playground.svg"/>
 	</g>
 </svg>
