@@ -1,0 +1,209 @@
+<svg version="1.1"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns="http://www.w3.org/2000/svg"
+	width="2500" height="3300"
+	viewBox="-1250 -1650 2500 3300">
+
+	<!--
+		Copyright (c) 2016-2017, Roboterclub Aachen e.V.
+		All rights reserved.
+
+		Redistribution and use in source and binary forms, with or without
+		modification, are permitted provided that the following conditions are met:
+
+		 * Redistributions of source code must retain the above copyright
+		   notice, this list of conditions and the following disclaimer.
+		 * Redistributions in binary form must reproduce the above copyright
+		   notice, this list of conditions and the following disclaimer in the
+		   documentation and/or other materials provided with the distribution.
+		 * Neither the name of the Roboterclub Aachen e.V. nor the
+		   names of its contributors may be used to endorse or promote products
+		   derived from this software without specific prior written permission.
+
+		THIS SOFTWARE IS PROVIDED BY ROBOTERCLUB AACHEN E.V. ''AS IS'' AND ANY
+		EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+		WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+		DISCLAIMED. IN NO EVENT SHALL ROBOTERCLUB AACHEN E.V. BE LIABLE FOR ANY
+		DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+		(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+		LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+		ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+		(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+		SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+	-->
+
+	<title>Eurobot 2017 Game Arena</title>
+
+	<!-- The official eurobot colors are:
+		- sky blue:			RAL5015		#007cb0
+		- traffic yellow:	RAL1023		#f7b500
+		- titanium:			RAL????		#0f0f0f
+		- dark black:		RAL9005		#0e0e10
+		- traffic white:	RAL9016		#f1f0ea
+		- pebble gray:		RAL7032		#b5b0a1
+		- playing floor:	RAL????		#8f8f8f
+
+		The colors are hardcoded since this significantly speeds up drawing.
+	-->
+	<defs>
+		<!-- beacons are always the same -->
+		<g id="beacon" z="350">
+			<!-- drawn so that the origin is in the middle of the beacon -->
+			<rect x="-40" y="-40" width="80" height="80" fill="black"/>
+			<!-- the small gray squares in the corners -->
+			<rect x="-40" y="-40" width="20" height="20"/>
+			<rect x="20" y="-40" width="20" height="20"/>
+			<rect x="20" y="20" width="20" height="20"/>
+			<rect x="-40" y="20" width="20" height="20"/>
+			<!-- the small screws -->
+			<circle cx="-30" cy="-30" r="2.5" stroke="black" stroke-width="1" fill-opacity="0"/>
+			<circle cx="30" cy="-30" r="2.5" stroke="black" stroke-width="1" fill-opacity="0"/>
+			<circle cx="-30" cy="30" r="2.5" stroke="black" stroke-width="1" fill-opacity="0"/>
+			<circle cx="30" cy="30" r="2.5" stroke="black" stroke-width="1" fill-opacity="0"/>
+
+			<!-- the border -->
+			<rect x="-40" y="-40" width="80" height="80" stroke="black" stroke-width="2" fill-opacity="0"/>
+		</g>
+
+		<!-- the start areas -->
+		<g id="start-area">
+			<rect x="-1022" y="-1522" width="372" height="1122"/>
+			<rect x="-650" y="-1500" width="22" height="750" zheight="22" stroke="black" stroke-width="1"/>
+			<rect x="-1000" y="-1150" width="350" height="400" stroke="black" stroke-width="2" fill="#b5b0a1"/>
+			<rect x="-650" y="-975" width="22" height="50" stroke="black" stroke-width="1" fill="#b5b0a1"/>
+		</g>
+
+		<!-- static game elements -->
+
+		<!-- the moon base -->
+		<g id="moon-base" fill="#f1f0ea" stroke="black" stroke-width="1">
+			<rect x="150" y="-1500" width="22" height="80" zheight="22"/>
+			<rect x="-322" y="-1500" width="22" height="80" zheight="22"/>
+			<rect x="-300" y="-1420" width="450" height="30" zheight="30"/>
+		</g>
+
+		<!-- the lunar module -->
+		<g id="lunar-storage-leg">
+			<rect x="-800" y="-70" width="600" height="30" zheight="30"/>
+			<rect x="-800" y="40" width="600" height="30" zheight="30"/>
+		</g>
+		<g id="lunar-storage" fill="#f1f0ea" stroke="black" stroke-width="1" transform="translate(1000,0)">
+			<path zheight="70" d="
+				M0,-200
+				A200,200 0 0 0 0 200
+				Z
+				"/>
+			<use xlink:href="#lunar-storage-leg" transform="rotate(0)"/>
+			<use xlink:href="#lunar-storage-leg" transform="rotate(-45)"/>
+			<use xlink:href="#lunar-storage-leg" transform="rotate(45)"/>
+		</g>
+
+		<!-- the small craters -->
+		<rect id="crater-border-small" x="-50" y="90" width="100" height="20" zheight="20"/>
+		<g id="crater-small" fill="#b5b0a1" stroke="black" stroke-width="1">
+			<use xlink:href="#crater-border-small" transform="rotate(0)"/>
+			<use xlink:href="#crater-border-small" transform="rotate(60)"/>
+			<use xlink:href="#crater-border-small" transform="rotate(120)"/>
+			<use xlink:href="#crater-border-small" transform="rotate(180)"/>
+			<use xlink:href="#crater-border-small" transform="rotate(240)"/>
+			<use xlink:href="#crater-border-small" transform="rotate(300)"/>
+		</g>
+
+		<!-- the big crater -->
+		<rect id="crater-border-big" x="-50" y="584.9" width="100" height="20" zheight="20"/>
+		<g id="crater-big" fill="#b5b0a1" stroke="black" stroke-width="1">
+			<use xlink:href="#crater-border-big" transform="rotate(5)"/>
+			<use xlink:href="#crater-border-big" transform="rotate(15)"/>
+			<use xlink:href="#crater-border-big" transform="rotate(25)"/>
+			<use xlink:href="#crater-border-big" transform="rotate(35)"/>
+			<use xlink:href="#crater-border-big" transform="rotate(45)"/>
+			<use xlink:href="#crater-border-big" transform="rotate(55)"/>
+			<use xlink:href="#crater-border-big" transform="rotate(65)"/>
+			<use xlink:href="#crater-border-big" transform="rotate(75)"/>
+			<use xlink:href="#crater-border-big" transform="rotate(85)"/>
+		</g>
+
+		<!-- the rockets -->
+		<g id="rocket" fill="#b5b0a1" stroke="black" stroke-width="1">
+			<rect x="-1044" y="-11" width="44" height="22" zheight="472"/>
+			<!-- The top is removed to see whats left inside of the rockets -->
+			<circle cx="-960" cy="0" r="40" z="475" zheight="80" fill-opacity="0.33"/>
+			<path zheight="475" stroke-width="3" fill-opacity="0" d="
+				M-926,20
+				A40,40 0 1 1 -926 -20
+				"/>
+		</g>
+
+		<!-- the shuttle cargo bay -->
+		<pattern id="net" x="1022" y="0" width="60" height="64" stroke="black" stroke-width="6" fill-opacity="0" patternUnits="userSpaceOnUse">
+			<line x1="0" y1="0" x2="60" y2="64"/>
+			<line x1="0" y1="64" x2="60" y2="0"/>
+		</pattern>
+		<g id="cargo-bay" stroke="black" stroke-width="1">
+			<rect x="-1222" y="-1450" zheight="350" width="222" height="300"/>
+			<rect x="-1200" y="-1428" width="178" height="256" stroke-width="1" fill="url(#net)"/>
+		</g>
+
+		<!-- mobile game elements: have a 2px border! -->
+
+	</defs>
+
+	<!-- Our internal coordinate system is:
+
+		- the origin is in the center of the game area
+		- x axis: goes from the rockets to the moon base from negative to positive (left to right)
+		- y axis: goes from the blue to yellow start area from negative to positive (down to up)
+	-->
+
+	<!-- gray game area excluding border -->
+	<rect x="-1022" y="-1522" width="2044" height="3044" fill="#C0C0C0"/>
+
+	<use id="starting-area-ours"   xlink:href="#start-area" fill="#f7b500" transform="scale(1,-1)"/>
+	<use id="starting-area-theirs" xlink:href="#start-area" fill="#007cb0"/>
+
+	<!-- draw the beacons -->
+	<g id="beacons">
+		<!-- ordered -x=>+x -->
+		<use x="-1062" y="-1562" id="beacon-theirs-1" xlink:href="#beacon" fill="#007cb0"/>
+		<use x="0"     y="-1562" id="beacon-ours-2"   xlink:href="#beacon" fill="#f7b500"/>
+		<use x="1062"  y="-1562" id="beacon-theirs-3" xlink:href="#beacon" fill="#007cb0"/>
+
+		<use x="-1062" y="1562"  id="beacon-ours-1"   xlink:href="#beacon" fill="#f7b500"/>
+		<use x="0"     y="1562"  id="beacon-theirs-2" xlink:href="#beacon" fill="#007cb0"/>
+		<use x="1062"  y="1562"  id="beacon-ours-3"   xlink:href="#beacon" fill="#f7b500"/>
+	</g>
+
+	<!-- draw the moon bases -->
+	<use id="moon-base-ours"   xlink:href="#moon-base" transform="scale(1,-1)"/>
+	<use id="moon-base-theirs" xlink:href="#moon-base"/>
+
+	<!-- draw the lunar lander -->
+	<use id="lunar-lander" xlink:href="#lunar-storage"/>
+
+	<!-- draw the small craters -->
+	<use x="-470" y="-850" id="crater-2" xlink:href="#crater-small"/>
+	<use x="870"  y="-430" id="crater-3" xlink:href="#crater-small"/>
+	<use x="870"  y="430"  id="crater-4" xlink:href="#crater-small"/>
+	<use x="-470" y="850"  id="crater-5" xlink:href="#crater-small"/>
+
+	<!-- draw the big craters -->
+	<use x="1000" y="-1500" id="crater-1" xlink:href="#crater-big"/>
+	<use x="1000" y="-1500" id="crater-6" xlink:href="#crater-big" transform="scale(1,-1)"/>
+
+	<!-- draw the borders of the game area -->
+	<g fill-opacity="0" stroke="black" stroke-width="2">
+		<rect x="-1022" y="-1522" width="2044" height="3044"/>
+		<rect x="-1000" y="-1500" width="2000" height="3000"/>
+	</g>
+
+	<!-- static game elements above mobile game elements -->
+	<!-- draw the rockets -->
+	<use y="350"  id="rocket-ours"   xlink:href="#rocket"/>
+	<use          id="rocket"        xlink:href="#rocket"/>
+	<use y="-350" id="rocket-theirs" xlink:href="#rocket"/>
+
+	<!-- draw the cargo bays -->
+	<use id="cargo-bay-ours"   xlink:href="#cargo-bay" fill="#f7b500" transform="scale(1,-1)"/>
+	<use id="cargo-bay-theirs" xlink:href="#cargo-bay" fill="#007cb0"/>
+
+</svg>
