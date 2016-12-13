@@ -85,7 +85,7 @@
 
 		<!-- the lunar module -->
 		<g id="lunar-storage-leg">
-			<rect x="-800" y="-70" width="600" height="28" zheight="28"/>
+			<rect x="-800" y="-68" width="600" height="28" zheight="28"/>
 			<rect x="-800" y="40" width="600" height="28" zheight="28"/>
 		</g>
 		<g id="lunar-storage" fill="#f1f0ea" stroke="black" stroke-width="1" transform="translate(1000,0)">
@@ -266,32 +266,32 @@
 	<!-- all titanium ore -->
 	<!-- identifiers ordered -y => +y -->
 	<!-- crater 1 -->
-	<use x="850"   y="-1460" id="titanium-ore-1"   xlink:href="#titanium-ore"/>
-	<use x="640"   y="-1450" id="titanium-ore-2"   xlink:href="#titanium-ore"/>
-	<use x="730"   y="-1420" id="titanium-ore-3"   xlink:href="#titanium-ore"/>
-	<use x="500"   y="-1400" id="titanium-ore-4"   xlink:href="#titanium-ore"/>
-	<use x="660"   y="-1370" id="titanium-ore-5"   xlink:href="#titanium-ore"/>
-	<use x="825"   y="-1360" id="titanium-ore-6"   xlink:href="#titanium-ore"/>
-	<use x="550"   y="-1320" id="titanium-ore-7"   xlink:href="#titanium-ore"/>
-	<use x="900"   y="-1315" id="titanium-ore-8"   xlink:href="#titanium-ore"/>
-	<use x="620"   y="-1310" id="titanium-ore-9"   xlink:href="#titanium-ore"/>
-	<use x="770"   y="-1305" id="titanium-ore-10"  xlink:href="#titanium-ore"/>
-	<use x="760"   y="-1220" id="titanium-ore-11"  xlink:href="#titanium-ore"/>
-	<use x="670"   y="-1210" id="titanium-ore-12"  xlink:href="#titanium-ore"/>
-	<use x="920"   y="-1200" id="titanium-ore-13"  xlink:href="#titanium-ore"/>
-	<use x="570"   y="-1195" id="titanium-ore-14"  xlink:href="#titanium-ore"/>
-	<use x="615"   y="-1125" id="titanium-ore-15"  xlink:href="#titanium-ore"/>
-	<use x="790"   y="-1120" id="titanium-ore-16"  xlink:href="#titanium-ore"/>
-	<use x="700"   y="-1110" id="titanium-ore-17"  xlink:href="#titanium-ore"/>
-	<use x="950"   y="-1100" id="titanium-ore-18"  xlink:href="#titanium-ore"/>
-	<use x="890"   y="-1000" id="titanium-ore-19"  xlink:href="#titanium-ore"/>
-	<use x="800"   y="-990"  id="titanium-ore-20"  xlink:href="#titanium-ore"/>
+	<use x="880"   y="-1470" id="titanium-ore-1"   xlink:href="#titanium-ore"/>
+	<use x="670"   y="-1470" id="titanium-ore-2"   xlink:href="#titanium-ore"/>
+	<use x="760"   y="-1440" id="titanium-ore-3"   xlink:href="#titanium-ore"/>
+	<use x="530"   y="-1420" id="titanium-ore-4"   xlink:href="#titanium-ore"/>
+	<use x="690"   y="-1390" id="titanium-ore-5"   xlink:href="#titanium-ore"/>
+	<use x="855"   y="-1380" id="titanium-ore-6"   xlink:href="#titanium-ore"/>
+	<use x="580"   y="-1340" id="titanium-ore-7"   xlink:href="#titanium-ore"/>
+	<use x="930"   y="-1335" id="titanium-ore-8"   xlink:href="#titanium-ore"/>
+	<use x="650"   y="-1330" id="titanium-ore-9"   xlink:href="#titanium-ore"/>
+	<use x="800"   y="-1325" id="titanium-ore-10"  xlink:href="#titanium-ore"/>
+	<use x="790"   y="-1240" id="titanium-ore-11"  xlink:href="#titanium-ore"/>
+	<use x="700"   y="-1230" id="titanium-ore-12"  xlink:href="#titanium-ore"/>
+	<use x="950"   y="-1220" id="titanium-ore-13"  xlink:href="#titanium-ore"/>
+	<use x="600"   y="-1215" id="titanium-ore-14"  xlink:href="#titanium-ore"/>
+	<use x="655"   y="-1145" id="titanium-ore-15"  xlink:href="#titanium-ore"/>
+	<use x="820"   y="-1140" id="titanium-ore-16"  xlink:href="#titanium-ore"/>
+	<use x="730"   y="-1130" id="titanium-ore-17"  xlink:href="#titanium-ore"/>
+	<use x="970"   y="-1120" id="titanium-ore-18"  xlink:href="#titanium-ore"/>
+	<use x="920"   y="-1020" id="titanium-ore-19"  xlink:href="#titanium-ore"/>
+	<use x="830"   y="-1040"  id="titanium-ore-20"  xlink:href="#titanium-ore"/>
 	<!-- crater 2 -->
-	<use x="-465"  y="-905"  id="titanium-ore-21"  xlink:href="#titanium-ore"/>
-	<use x="-522"  y="-867"  id="titanium-ore-22"  xlink:href="#titanium-ore"/>
-	<use x="-415"  y="-865"  id="titanium-ore-23"  xlink:href="#titanium-ore"/>
-	<use x="-505"  y="-805"  id="titanium-ore-24"  xlink:href="#titanium-ore"/>
-	<use x="-440"  y="-800"  id="titanium-ore-25"  xlink:href="#titanium-ore"/>
+	<use x="-455"  y="-905"  id="titanium-ore-21"  xlink:href="#titanium-ore"/>
+	<use x="-512"  y="-867"  id="titanium-ore-22"  xlink:href="#titanium-ore"/>
+	<use x="-405"  y="-865"  id="titanium-ore-23"  xlink:href="#titanium-ore"/>
+	<use x="-495"  y="-805"  id="titanium-ore-24"  xlink:href="#titanium-ore"/>
+	<use x="-430"  y="-800"  id="titanium-ore-25"  xlink:href="#titanium-ore"/>
 	<!-- crater 3 -->
 	<use x="865"   y="-485"  id="titanium-ore-26"  xlink:href="#titanium-ore"/>
 	<use x="922"   y="-447"  id="titanium-ore-27"  xlink:href="#titanium-ore"/>
@@ -305,57 +305,57 @@
 	<use x="922"   y="447"   id="titanium-ore-34"  xlink:href="#titanium-ore"/>
 	<use x="865"   y="485"   id="titanium-ore-35"  xlink:href="#titanium-ore"/>
 	<!-- crater 5 -->
-	<use x="-440"  y="800"   id="titanium-ore-36"  xlink:href="#titanium-ore"/>
-	<use x="-505"  y="805"   id="titanium-ore-37"  xlink:href="#titanium-ore"/>
-	<use x="-415"  y="865"   id="titanium-ore-38"  xlink:href="#titanium-ore"/>
-	<use x="-522"  y="867"   id="titanium-ore-39"  xlink:href="#titanium-ore"/>
-	<use x="-465"  y="905"   id="titanium-ore-40"  xlink:href="#titanium-ore"/>
+	<use x="-430"  y="800"   id="titanium-ore-36"  xlink:href="#titanium-ore"/>
+	<use x="-495"  y="805"   id="titanium-ore-37"  xlink:href="#titanium-ore"/>
+	<use x="-405"  y="865"   id="titanium-ore-38"  xlink:href="#titanium-ore"/>
+	<use x="-512"  y="867"   id="titanium-ore-39"  xlink:href="#titanium-ore"/>
+	<use x="-455"  y="905"   id="titanium-ore-40"  xlink:href="#titanium-ore"/>
 	<!-- crater 6 -->
-	<use x="800"   y="990"   id="titanium-ore-41"  xlink:href="#titanium-ore"/>
-	<use x="890"   y="1000"  id="titanium-ore-42"  xlink:href="#titanium-ore"/>
-	<use x="950"   y="1100"  id="titanium-ore-43"  xlink:href="#titanium-ore"/>
-	<use x="700"   y="1110"  id="titanium-ore-44"  xlink:href="#titanium-ore"/>
-	<use x="790"   y="1120"  id="titanium-ore-45"  xlink:href="#titanium-ore"/>
-	<use x="615"   y="1125"  id="titanium-ore-46"  xlink:href="#titanium-ore"/>
-	<use x="570"   y="1195"  id="titanium-ore-47"  xlink:href="#titanium-ore"/>
-	<use x="920"   y="1200"  id="titanium-ore-48"  xlink:href="#titanium-ore"/>
-	<use x="670"   y="1210"  id="titanium-ore-49"  xlink:href="#titanium-ore"/>
-	<use x="760"   y="1220"  id="titanium-ore-50"  xlink:href="#titanium-ore"/>
-	<use x="770"   y="1305"  id="titanium-ore-51"  xlink:href="#titanium-ore"/>
-	<use x="620"   y="1310"  id="titanium-ore-52"  xlink:href="#titanium-ore"/>
-	<use x="900"   y="1315"  id="titanium-ore-53"  xlink:href="#titanium-ore"/>
-	<use x="550"   y="1320"  id="titanium-ore-54"  xlink:href="#titanium-ore"/>
-	<use x="825"   y="1360"  id="titanium-ore-55"  xlink:href="#titanium-ore"/>
-	<use x="660"   y="1370"  id="titanium-ore-56"  xlink:href="#titanium-ore"/>
-	<use x="500"   y="1400"  id="titanium-ore-57"  xlink:href="#titanium-ore"/>
-	<use x="730"   y="1420"  id="titanium-ore-58"  xlink:href="#titanium-ore"/>
-	<use x="640"   y="1450"  id="titanium-ore-59"  xlink:href="#titanium-ore"/>
-	<use x="850"   y="1460"  id="titanium-ore-60"  xlink:href="#titanium-ore"/>
+	<use x="830"   y="1040"   id="titanium-ore-41"  xlink:href="#titanium-ore"/>
+	<use x="920"   y="1020"  id="titanium-ore-42"  xlink:href="#titanium-ore"/>
+	<use x="970"   y="1120"  id="titanium-ore-43"  xlink:href="#titanium-ore"/>
+	<use x="730"   y="1130"  id="titanium-ore-44"  xlink:href="#titanium-ore"/>
+	<use x="820"   y="1140"  id="titanium-ore-45"  xlink:href="#titanium-ore"/>
+	<use x="655"   y="1145"  id="titanium-ore-46"  xlink:href="#titanium-ore"/>
+	<use x="600"   y="1215"  id="titanium-ore-47"  xlink:href="#titanium-ore"/>
+	<use x="950"   y="1220"  id="titanium-ore-48"  xlink:href="#titanium-ore"/>
+	<use x="700"   y="1230"  id="titanium-ore-49"  xlink:href="#titanium-ore"/>
+	<use x="790"   y="1240"  id="titanium-ore-50"  xlink:href="#titanium-ore"/>
+	<use x="800"   y="1325"  id="titanium-ore-51"  xlink:href="#titanium-ore"/>
+	<use x="650"   y="1330"  id="titanium-ore-52"  xlink:href="#titanium-ore"/>
+	<use x="930"   y="1335"  id="titanium-ore-53"  xlink:href="#titanium-ore"/>
+	<use x="580"   y="1340"  id="titanium-ore-54"  xlink:href="#titanium-ore"/>
+	<use x="855"   y="1380"  id="titanium-ore-55"  xlink:href="#titanium-ore"/>
+	<use x="690"   y="1390"  id="titanium-ore-56"  xlink:href="#titanium-ore"/>
+	<use x="530"   y="1420"  id="titanium-ore-57"  xlink:href="#titanium-ore"/>
+	<use x="760"   y="1440"  id="titanium-ore-58"  xlink:href="#titanium-ore"/>
+	<use x="670"   y="1470"  id="titanium-ore-59"  xlink:href="#titanium-ore"/>
+	<use x="880"   y="1470"  id="titanium-ore-60"  xlink:href="#titanium-ore"/>
 
 	<!-- all moon rock -->
 	<!-- identifiers ordered -y => +y -->
 	<!-- crater 1 -->
-	<use x="940"   y="-1455" id="moon-rock-1"   xlink:href="#moon-rock"/>
-	<use x="560"   y="-1450" id="moon-rock-2"   xlink:href="#moon-rock"/>
-	<use x="845"   y="-1270" id="moon-rock-3"   xlink:href="#moon-rock"/>
-	<use x="530"   y="-1265" id="moon-rock-4"   xlink:href="#moon-rock"/>
-	<use x="700"   y="-1300" id="moon-rock-5"   xlink:href="#moon-rock"/>
-	<use x="860"   y="-1140" id="moon-rock-6"   xlink:href="#moon-rock"/>
-	<use x="860"   y="-1060" id="moon-rock-7"   xlink:href="#moon-rock"/>
-	<use x="730"   y="-1050" id="moon-rock-8"   xlink:href="#moon-rock"/>
+	<use x="970"   y="-1455" id="moon-rock-1"   xlink:href="#moon-rock"/>
+	<use x="590"   y="-1450" id="moon-rock-2"   xlink:href="#moon-rock"/>
+	<use x="875"   y="-1270" id="moon-rock-3"   xlink:href="#moon-rock"/>
+	<use x="560"   y="-1265" id="moon-rock-4"   xlink:href="#moon-rock"/>
+	<use x="730"   y="-1300" id="moon-rock-5"   xlink:href="#moon-rock"/>
+	<use x="890"   y="-1140" id="moon-rock-6"   xlink:href="#moon-rock"/>
+	<use x="890"   y="-1070" id="moon-rock-7"   xlink:href="#moon-rock"/>
+	<use x="760"   y="-1060" id="moon-rock-8"   xlink:href="#moon-rock"/>
 	<!-- crater 3 -->
 	<use x="870"   y="-430"  id="moon-rock-9"   xlink:href="#moon-rock"/>
 	<!-- crater 4 -->
 	<use x="870"   y="430"   id="moon-rock-10"  xlink:href="#moon-rock"/>
 	<!-- crater 6 -->
-	<use x="730"   y="1050"  id="moon-rock-11"  xlink:href="#moon-rock"/>
-	<use x="860"   y="1060"  id="moon-rock-12"  xlink:href="#moon-rock"/>
-	<use x="860"   y="1140"  id="moon-rock-13"  xlink:href="#moon-rock"/>
-	<use x="530"   y="1265"  id="moon-rock-14"  xlink:href="#moon-rock"/>
-	<use x="845"   y="1270"  id="moon-rock-15"  xlink:href="#moon-rock"/>
-	<use x="700"   y="1300"  id="moon-rock-16"  xlink:href="#moon-rock"/>
-	<use x="560"   y="1450"  id="moon-rock-17"  xlink:href="#moon-rock"/>
-	<use x="940"   y="1455"  id="moon-rock-18"  xlink:href="#moon-rock"/>
+	<use x="760"   y="1060"  id="moon-rock-11"  xlink:href="#moon-rock"/>
+	<use x="890"   y="1070"  id="moon-rock-12"  xlink:href="#moon-rock"/>
+	<use x="890"   y="1140"  id="moon-rock-13"  xlink:href="#moon-rock"/>
+	<use x="560"   y="1265"  id="moon-rock-14"  xlink:href="#moon-rock"/>
+	<use x="875"   y="1270"  id="moon-rock-15"  xlink:href="#moon-rock"/>
+	<use x="730"   y="1300"  id="moon-rock-16"  xlink:href="#moon-rock"/>
+	<use x="590"   y="1450"  id="moon-rock-17"  xlink:href="#moon-rock"/>
+	<use x="970"   y="1455"  id="moon-rock-18"  xlink:href="#moon-rock"/>
 
 	<!-- static game elements above mobile game elements -->
 	<!-- draw the rockets -->
