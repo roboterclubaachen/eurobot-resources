@@ -228,7 +228,7 @@
 	<!-- identifiers ordered -z => +z then -y => +y -->
 	<!-- Z layer 0 -->
 	<!-- modules on their side -->
-	<use x="350"   y="-1460" z="0"   id="lunar-module-1"        xlink:href="#lunar-module-poly-r"/>
+	<use x="350"   y="-1460" z="0"   id="lunar-module-1"        xlink:href="#lunar-module-poly-l"/>
 	<use x="-400"  y="-1300" z="0"   id="lunar-module-theirs-1" xlink:href="#lunar-module" fill="#007cb0"/>
 	<use x="100"   y="-1000" z="0"   id="lunar-module-2"        xlink:href="#lunar-module-poly-r"/>
 	<use x="850"   y="-700"  z="0"   id="lunar-module-theirs-2" xlink:href="#lunar-module" fill="#007cb0"/>
@@ -245,23 +245,23 @@
 	<use x="850"   y="700"   z="0"   id="lunar-module-ours-3"   xlink:href="#lunar-module" fill="#f7b500"/>
 	<use x="100"   y="1000"  z="0"   id="lunar-module-7"        xlink:href="#lunar-module-poly-l"/>
 	<use x="-400"  y="1300"  z="0"   id="lunar-module-ours-4"   xlink:href="#lunar-module" fill="#f7b500"/>
-	<use x="350"   y="1460"  z="0"   id="lunar-module-8"        xlink:href="#lunar-module-poly-l"/>
+	<use x="350"   y="1460"  z="0"   id="lunar-module-8"        xlink:href="#lunar-module-poly-r"/>
 
 	<!-- Z layer 1 -->
-	<use x="350"   y="-1460" z="100" id="lunar-module-9"        xlink:href="#lunar-module-poly-l"/>
+	<use x="350"   y="-1460" z="100" id="lunar-module-9"        xlink:href="#lunar-module-poly-r"/>
 	<use x="-960"  y="-350"  z="100" id="lunar-module-theirs-5" xlink:href="#lunar-module" fill="#007cb0"/>
 	<use x="-960"  y="350"   z="100" id="lunar-module-ours-5"   xlink:href="#lunar-module" fill="#f7b500"/>
-	<use x="350"   y="1460"  z="100" id="lunar-module-10"       xlink:href="#lunar-module-poly-r"/>
+	<use x="350"   y="1460"  z="100" id="lunar-module-10"       xlink:href="#lunar-module-poly-l"/>
 	<!-- Z layer 2 -->
-	<use x="350"   y="-1460" z="200" id="lunar-module-11"       xlink:href="#lunar-module-poly-r"/>
+	<use x="350"   y="-1460" z="200" id="lunar-module-11"       xlink:href="#lunar-module-poly-l"/>
 	<use x="-960"  y="-350"  z="200" id="lunar-module-theirs-6" xlink:href="#lunar-module" fill="#007cb0"/>
 	<use x="-960"  y="350"   z="200" id="lunar-module-ours-6"   xlink:href="#lunar-module" fill="#f7b500"/>
-	<use x="350"   y="1460"  z="200" id="lunar-module-12"       xlink:href="#lunar-module-poly-l"/>
+	<use x="350"   y="1460"  z="200" id="lunar-module-12"       xlink:href="#lunar-module-poly-r"/>
 	<!-- Z layer 3 -->
-	<use x="350"   y="-1460" z="300" id="lunar-module-13"       xlink:href="#lunar-module-poly-l"/>
+	<use x="350"   y="-1460" z="300" id="lunar-module-13"       xlink:href="#lunar-module-poly-r"/>
 	<use x="-960"  y="-350"  z="300" id="lunar-module-theirs-7" xlink:href="#lunar-module" fill="#007cb0"/>
 	<use x="-960"  y="350"   z="300" id="lunar-module-ours-7"   xlink:href="#lunar-module" fill="#f7b500"/>
-	<use x="350"   y="1460"  z="300" id="lunar-module-14"       xlink:href="#lunar-module-poly-r"/>
+	<use x="350"   y="1460"  z="300" id="lunar-module-14"       xlink:href="#lunar-module-poly-l"/>
 
 	<!-- all titanium ore -->
 	<!-- identifiers ordered -y => +y -->
