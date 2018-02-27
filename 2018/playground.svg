@@ -1,0 +1,210 @@
+<svg version="1.1"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns="http://www.w3.org/2000/svg"
+	width="2500" height="3300"
+	viewBox="-1250 -1650 2500 3300">
+
+	<!--
+		Copyright (c) 2016-2018, Roboterclub Aachen e.V.
+		All rights reserved.
+
+		Redistribution and use in source and binary forms, with or without
+		modification, are permitted provided that the following conditions are met:
+
+		 * Redistributions of source code must retain the above copyright
+		   notice, this list of conditions and the following disclaimer.
+		 * Redistributions in binary form must reproduce the above copyright
+		   notice, this list of conditions and the following disclaimer in the
+		   documentation and/or other materials provided with the distribution.
+		 * Neither the name of the Roboterclub Aachen e.V. nor the
+		   names of its contributors may be used to endorse or promote products
+		   derived from this software without specific prior written permission.
+
+		THIS SOFTWARE IS PROVIDED BY ROBOTERCLUB AACHEN E.V. ''AS IS'' AND ANY
+		EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+		WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+		DISCLAIMED. IN NO EVENT SHALL ROBOTERCLUB AACHEN E.V. BE LIABLE FOR ANY
+		DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+		(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+		LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+		ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+		(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+		SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+	-->
+
+	<title>Eurobot 2018 Game Arena</title>
+
+	<!-- The official eurobot colors are:
+		- signal orange:	RAL2010		#d05d28
+		- yellow green:		RAL6018		#61993b
+		- pebble gray:		RAL7032		#b5b0a1
+		- traffic yellow:	RAL1023		#f7b500
+		- jet black:		RAL9005		#0e0e10
+		- traffic blue:		RAL5015		#007cb0
+		- white:			RAL9010		#f1ece1
+		- playground		?			#b0aa91
+
+		The colors are hardcoded since this significantly speeds up drawing.
+	-->
+	<defs>
+		<!-- playground printing -->
+		<g id="construction-area">
+			<rect x="-1000" y="-1100" width="180" height="560" id="construction-area-ours" fill="#b09e7c" />
+			<path d="M-835 -1100 h15 v560 h-180 v-15 h165 v-545" />
+		</g>
+		
+		<!-- beacons are always the same (but now partly rotated) -->
+		<g id="beacon" z="0">
+			<!-- drawn so that the origin is in the middle of the beacon -->
+			<path d="M -72,72 v -122 h 67 v 50 a 5,5 0 0 0 5,5 5,5 0 0 0 5,-5 v -50 H 50 v 122 Z" />
+			<path d="M -72,-50 l 22,0 l 0,100 l 100,0 l 0,22 l -122,0 z" stroke="black" stroke-width="1" zheight="70" />
+		</g>
+		<g id="central-tracking-device" z="1000">
+			<path d="M -50,0 v -100 h 45 v 50 a 5,5 0 0 0 5,5 5,5 0 0 0 5,-5 v -50 H 50 v 100 Z" fill="#61993b"/>
+			<path d="M -50,0 v 100 h 45 v -50 a 5,5 0 0 1 5,-5 5,5 0 0 1 5,5 v 50 H 50 v -100 Z" fill="#d05d28"/>
+			<path d="M -50,0 v 100 h 45 v -50 a 5,5 0 0 1 5,-5 5,5 0 0 1 5,5 v 50 h 45 v -200
+					 h -45 v 50 a 5,5 0 0 1 -5,5 5,5 0 0 1 -5,-5 v -50 h -45 Z" stroke="black" fill-opacity="0" />
+		</g>
+		
+		<!-- static game elements -->
+		<g id="water-tower">
+			<rect x="-185" y="-185" width="370" height="370" z="0" />
+			<path d="M-185 -185 h370 v10 h-360 v360 h-10 Z" z="0" zheight="600" stroke="black" />
+			<path d="M175 -175 h10 v360 h-360 v-10 h350 Z" z="0" zheight="600" stroke="black" />
+		</g>
+		
+		<g id="water-recuperator">
+			<rect x="-11" y="-44" width="22" height="89" stroke="black" />
+			<circle cx="0" cy="72" r="27" stroke="black" fill="white" fill-opacity="0.1" z="270" />
+			<circle cx="0" cy="11.2" r="27" stroke="black" fill-opacity="0" z="614.6" />
+			<line x1="27" y1="72" z1="270" x2="27" y2="11.2" z2="614.6" stroke="black" /> 
+			<line x1="-27" y1="72" z1="270" x2="-27" y2="11.2" z2="614.6" stroke="black" /> 
+		</g>
+		<g id="single-color-recuperator">
+			<use xlink:href="#water-recuperator" />
+			<circle cx="0" cy="68.2" r="22" stroke="black" z="270" zheight="44" />
+			<circle cx="0" cy="60.4" r="22" stroke="black" z="314" zheight="44" />
+			<circle cx="0" cy="52.8" r="22" stroke="black" z="358" zheight="44" />
+			<circle cx="0" cy="45.2" r="22" stroke="black" z="402" zheight="44" />
+			<circle cx="0" cy="37.6" r="22" stroke="black" z="446" zheight="44" />
+			<circle cx="0" cy="30" r="22" stroke="black" z="490" zheight="44" />
+			<circle cx="0" cy="20.4" r="22" stroke="black" z="534" zheight="44" />
+			<circle cx="0" cy="14.8" r="22" stroke="black" z="578" zheight="44" />
+		</g>
+		
+		<g id="panel-switch">
+			<rect x="-44" y="-495" width="22" height="495" stroke="black" />
+			<rect x="-22" y="-410" width="10" height="80" stroke="black" fill="black" />
+			<rect x="-12" y="-400.05" width="6.4" height="60.1" stroke="black" fill="black" />
+		</g>
+		
+
+		<!-- mobile game elements -->
+		<g id="building-block-group" z="0">
+			<!-- origin is in the center of the center (yellow) block -->
+			<rect x="-87" y="-29" width="58" height="58" zheight="58" fill="#0e0e10" />
+			<rect x="-29" y="-29" width="58" height="58" zheight="58" fill="#f7b500"/>
+			<rect x="29" y="-29" width="58" height="58" zheight="58" fill="#007cb0" />
+			<rect x="-29" y="-87" width="58" height="58" zheight="58" fill="#d05d28" />
+			<rect x="-29" y="29" width="58" height="58" zheight="58" fill="#61993b" />
+		</g>
+		
+	</defs>
+
+	<!-- Our internal coordinate system is:
+
+		- the origin is in the center of the game area
+		- x axis: goes from the starting areas to the bees from negative to positive (left to right)
+		- y axis: goes from the green to orange start area from negative to positive (down to up)
+	-->
+
+	<!-- gray game area excluding border -->
+	<rect x="-1022" y="-1522" width="2044" height="3044" fill="#b0aa91"/>
+
+	<!-- starting areas -->
+	<rect x="-1000" y="-1500" width="650" height="400" id="start-area-ours" fill="#61993b" />
+	<rect x="-1000" y="1100" width="650" height="400" id="start-area-theirs" fill="#d05d28"/>
+	
+	<!-- construction areas -->
+	<use id="construction-area-ours" xlink:href="#construction-area" fill="#61993b" />
+	<use id="construction-area-theirs" xlink:href="#construction-area" fill="#d05d28" transform="scale(1 -1)" />
+	
+	<!-- draw switches -->
+	<use x="-1000" y="0" xlink:href="#panel-switch" fill="#61993b" />
+	<use x="-1000" y="0" xlink:href="#panel-switch" fill="#d05d28" transform="scale(1 -1)" />
+	
+	<!-- draw the beacons -->
+	<g id="beacons">
+		<!-- ordered -x=>+x -->
+		<use x="-950" y="-1594" id="beacon-ours-1" xlink:href="#beacon" fill="#61993b"/>
+		<use x="0"     y="-1594" id="beacon-theirs-2"   xlink:href="#beacon" fill="#d05d28"/>
+		<use x="950"  y="-1594" id="beacon-ours-3" xlink:href="#beacon" fill="#61993b"/>
+		
+		<use x="-950" y="-1594" id="beacon-theirs-1" xlink:href="#beacon" fill="#d05d28" transform="rotate(180)" />
+		<use x="0"     y="-1594" id="beacon-ours-2"   xlink:href="#beacon" fill="#61993b" transform="rotate(180)"/>
+		<use x="950"  y="-1594" id="beacon-theirs-3" xlink:href="#beacon" fill="#d05d28" transform="rotate(180)"/>
+		
+		<use x="-1072"  y="0" id="ctd" xlink:href="#central-tracking-device"/>
+	</g>
+	
+	<!-- draw the wastewater treatment plant and water towers -->
+	<g id="treatment-plant">
+		<rect x="750" y="-600" z="0" width="22" height="600" zheight="128" fill="#61993b"/>
+		<rect x="750" y="0" z="0" width="22" height="600" zheight="128" fill="#d05d28"/>
+		<rect x="978" y="-600" z="0" width="22" height="600" zheight="140" fill="#61993b"/>
+		<rect x="978" y="0" z="0" width="22" height="600" zheight="140" fill="#d05d28"/>
+		<rect x="772" y="-600" z="100" width="206" height="1200" zheight="100" fill="#b0aa91"/>
+		<rect x="750" y="-609" z="0" width="250" height="9" zheight="128" fill="#61993b"/>
+		<rect x="750" y="600" z="0" width="250" height="9" zheight="128" fill="#d05d28"/>
+		<rect x="772" y="-11" z="0" width="206" height="22" zheight="128" fill="#b5b0a1"/>
+	</g>
+	<g id="water-towers">
+		<use x="-1207" y="-1325" xlink:href="#water-tower" transform="scale(1 -1)" fill="#d05d28" />
+		<use x="-1207" y="-1325" xlink:href="#water-tower" fill="#61993b" />
+	</g>
+	
+	<!-- draw the water recuperators -->
+	<g id="recuperators">
+		<use x="-160" y="-1500" xlink:href="#single-color-recuperator" fill="#61993b" />
+		<use x="-160" y="-1500" xlink:href="#single-color-recuperator" fill="#d05d28" transform="scale(1 -1)" />
+		<g transform="translate(1000 -890) rotate(90)">
+			<use x="0" y="0" xlink:href="#water-recuperator" fill="#61993b" />
+			<circle cx="0" cy="68.2" r="22" stroke="black" fill="#61993b" z="270" zheight="44" />
+			<circle cx="0" cy="60.4" r="22" stroke="black" fill="#d05d28" z="314" zheight="44" />
+			<circle cx="0" cy="52.8" r="22" stroke="black" fill="#61993b" z="358" zheight="44" />
+			<circle cx="0" cy="45.2" r="22" stroke="black" fill="#d05d28" z="402" zheight="44" />
+			<circle cx="0" cy="37.6" r="22" stroke="black" fill="#61993b" z="446" zheight="44" />
+			<circle cx="0" cy="30" r="22" stroke="black" fill="#d05d28" z="490" zheight="44" />
+			<circle cx="0" cy="20.4" r="22" stroke="black" fill="#61993b" z="534" zheight="44" />
+			<circle cx="0" cy="14.8" r="22" stroke="black" fill="#d05d28" z="578" zheight="44" />
+		</g>
+		<g transform="translate(1000 890) rotate(90)">
+			<use x="0" y="0" xlink:href="#water-recuperator" fill="#d05d28" />
+			<circle cx="0" cy="68.2" r="22" stroke="black" fill="#d05d28" z="270" zheight="44" />
+			<circle cx="0" cy="60.4" r="22" stroke="black" fill="#61993b" z="314" zheight="44" />
+			<circle cx="0" cy="52.8" r="22" stroke="black" fill="#d05d28" z="358" zheight="44" />
+			<circle cx="0" cy="45.2" r="22" stroke="black" fill="#61993b" z="402" zheight="44" />
+			<circle cx="0" cy="37.6" r="22" stroke="black" fill="#d05d28" z="446" zheight="44" />
+			<circle cx="0" cy="30" r="22" stroke="black" fill="#61993b" z="490" zheight="44" />
+			<circle cx="0" cy="20.4" r="22" stroke="black" fill="#d05d28" z="534" zheight="44" />
+			<circle cx="0" cy="14.8" r="22" stroke="black" fill="#61993b" z="578" zheight="44" />
+		</g>
+	</g>
+	
+	<!-- draw building block groups -->
+	<g id="blocks">
+		<use x="500" y="-400" xlink:href="#building-block-group"/>
+		<use x="500" y="400" xlink:href="#building-block-group"/>
+		<use x="-460" y="-650" xlink:href="#building-block-group"/>
+		<use x="-460" y="650" xlink:href="#building-block-group"/>
+		<use x="190" y="-1200" xlink:href="#building-block-group"/>
+		<use x="190" y="1200" xlink:href="#building-block-group"/>
+	</g>
+
+	<!-- draw the playground border -->
+	<g fill-opacity="0" stroke="black" stroke-width="2">
+		<rect x="-1022" y="-1522" width="2044" height="3044"/>
+		<rect x="-1000" y="-1500" width="2000" height="3000"/>
+	</g>
+
+</svg>
