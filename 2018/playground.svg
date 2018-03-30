@@ -88,7 +88,7 @@
 			<circle cx="0" cy="45.2" r="22" stroke="black" z="402" zheight="44" />
 			<circle cx="0" cy="37.6" r="22" stroke="black" z="446" zheight="44" />
 			<circle cx="0" cy="30" r="22" stroke="black" z="490" zheight="44" />
-			<circle cx="0" cy="20.4" r="22" stroke="black" z="534" zheight="44" />
+			<circle cx="0" cy="22.4" r="22" stroke="black" z="534" zheight="44" />
 			<circle cx="0" cy="14.8" r="22" stroke="black" z="578" zheight="44" />
 		</g>
 		
@@ -175,7 +175,7 @@
 			<circle cx="0" cy="45.2" r="22" stroke="black" fill="#d05d28" z="402" zheight="44" />
 			<circle cx="0" cy="37.6" r="22" stroke="black" fill="#61993b" z="446" zheight="44" />
 			<circle cx="0" cy="30" r="22" stroke="black" fill="#d05d28" z="490" zheight="44" />
-			<circle cx="0" cy="20.4" r="22" stroke="black" fill="#61993b" z="534" zheight="44" />
+			<circle cx="0" cy="22.4" r="22" stroke="black" fill="#61993b" z="534" zheight="44" />
 			<circle cx="0" cy="14.8" r="22" stroke="black" fill="#d05d28" z="578" zheight="44" />
 		</g>
 		<g transform="translate(1000 890) rotate(90)">
@@ -186,7 +186,7 @@
 			<circle cx="0" cy="45.2" r="22" stroke="black" fill="#61993b" z="402" zheight="44" />
 			<circle cx="0" cy="37.6" r="22" stroke="black" fill="#d05d28" z="446" zheight="44" />
 			<circle cx="0" cy="30" r="22" stroke="black" fill="#61993b" z="490" zheight="44" />
-			<circle cx="0" cy="20.4" r="22" stroke="black" fill="#d05d28" z="534" zheight="44" />
+			<circle cx="0" cy="22.4" r="22" stroke="black" fill="#d05d28" z="534" zheight="44" />
 			<circle cx="0" cy="14.8" r="22" stroke="black" fill="#61993b" z="578" zheight="44" />
 		</g>
 	</g>
