@@ -1,0 +1,1070 @@
+<!--
+    Copyright (c) 2018, Niklas Hauser
+    All rights reserved.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met:
+
+     * Redistributions of source code must retain the above copyright
+       notice, this list of conditions and the following disclaimer.
+     * Redistributions in binary form must reproduce the above copyright
+       notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+     * Neither the name of the Roboterclub Aachen e.V. nor the
+       names of its contributors may be used to endorse or promote products
+       derived from this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY ROBOTERCLUB AACHEN E.V. ''AS IS'' AND ANY
+    EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+    WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL ROBOTERCLUB AACHEN E.V. BE LIABLE FOR ANY
+    DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+    LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+    ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<x3d id="x3d">
+<scene>
+<!-- Color definitions -->
+<appearance DEF="color-gray">    <material diffuseColor="0.7098039216 0.6901960784 0.631372549"/></appearance>
+<appearance DEF="color-oxygen">  <material diffuseColor="0.5 0.5 0.5"/></appearance>
+
+<appearance DEF="color-ours">    <material diffuseColor="0.9686274510 0.7098039216 0"/></appearance>
+<appearance DEF="color-theirs">  <material diffuseColor="0.5176470588 0.2980392157 0.5098039216"/></appearance>
+
+<appearance DEF="color-redium">  <material diffuseColor="0.7333333333 0.1176470588 0.0627450980"/></appearance>
+<appearance DEF="color-greenium"><material diffuseColor="0.3803921569 0.6          0.2313725490"/></appearance>
+<appearance DEF="color-blueium"> <material diffuseColor="0            0.4862745098 0.6901960784"/></appearance>
+<appearance DEF="color-goldium"> <material diffuseColor="1            1            0.7"/></appearance>
+
+<appearance DEF="color-black">   <material diffuseColor="0.0549019607 0.0549019607 0.0627450980"/></appearance>
+<appearance DEF="color-glass">   <material diffuseColor="0.7 0.7 0.9" specularColor="0.8 0.8 0.9" shininess="0.7" transparency="0.8"/></appearance>
+<appearance DEF="color-metal">   <material diffuseColor="0.7 0.7 0.7" shininess="0.9"/></appearance>
+
+<!-- Our internal coordinate system is:
+    - the origin is in the center of the game area
+    - x axis: goes from left to right
+    - y axis: goes from down to up
+    - z axis: goes from table to sky
+
+    We need to rotate -90 around the x-axis
+-->
+<transform rotation="1 0 0 -1.5708" scale="0.001 0.001 0.001">
+
+<group id="game-area">
+    <!-- BRANDING -->
+    <transform translation="0 750 0.5" scale="100 100 1">
+      <shape>
+        <appearance USE="color-oxygen"></appearance>
+        <text string="www.roboterclub.rwth-aachen.de">
+            <fontstyle family="Helvetica" size="1" justify="middle"></fontstyle>
+        </text>
+      </shape>
+    </transform>
+
+    <!-- GAME AREA -->
+    <transform translation="-750 0 0">
+        <shape>
+            <appearance>
+                <ImageTexture url="table-ours.jpg"/>
+            </appearance>
+            <plane size="1500 2000"/>
+        </shape>
+    </transform>
+    <transform translation="750 0 0">
+        <shape>
+            <appearance>
+                <ImageTexture url="table-theirs.jpg"/>
+            </appearance>
+            <plane size="1500 2000"/>
+        </shape>
+    </transform>
+    <transform translation="0 0 -1" rotation="0 1 0 3.1415926536">
+        <shape>
+            <appearance USE="color-gray"></appearance>
+            <plane size="3022 2022"/>
+        </shape>
+    </transform>
+    <transform translation="0 1011 35">
+        <shape>
+            <appearance USE="color-gray"></appearance>
+            <box size="3000 22 70"/>
+        </shape>
+    </transform>
+    <transform translation="0 -1011 35">
+        <shape>
+            <appearance USE="color-gray"></appearance>
+            <box size="3000 22 70"/>
+        </shape>
+    </transform>
+    <transform translation="1511 0 35">
+        <shape>
+            <appearance USE="color-gray"></appearance>
+            <box size="22 2044 70"/>
+        </shape>
+    </transform>
+    <transform translation="-1511 0 35">
+        <shape>
+            <appearance USE="color-gray"></appearance>
+            <box size="22 2044 70"/>
+        </shape>
+    </transform>
+
+    <!-- BEACONS -->
+    <transform translation="-1594 950 0">
+        <group DEF="beacon-left-ours" id="beacon-ours-1">
+            <transform translation="0 0 11">
+                <shape>
+                    <appearance USE="color-ours"></appearance>
+                    <box size="100 100 22"/>
+                </shape>
+            </transform>
+            <group DEF="beacon-left">
+                <transform translation="0 61 35">
+                    <shape>
+                        <appearance USE="color-gray"></appearance>
+                        <box size="100 22 70"/>
+                    </shape>
+                </transform>
+                <transform translation="61 11 35">
+                    <shape>
+                        <appearance USE="color-gray"></appearance>
+                        <box size="22 122 70"/>
+                    </shape>
+                </transform>
+            </group>
+        </group>
+    </transform>
+
+    <transform translation="-1594 0 0">
+        <group id="beacon-theirs-1">
+            <transform translation="0 0 11">
+                <shape>
+                    <appearance USE="color-theirs"></appearance>
+                    <box size="100 100 22"/>
+                </shape>
+            </transform>
+            <shape USE="beacon-left"/>
+        </group>
+    </transform>
+
+    <transform translation="-1594 -950 0">
+        <shape USE="beacon-left-ours" id="beacon-ours-3"/>
+    </transform>
+
+
+    <transform translation="1594 950 0">
+        <group DEF="beacon-right-theirs" id="beacon-theirs-2">
+            <transform translation="0 0 11">
+                <shape>
+                    <appearance USE="color-theirs"></appearance>
+                    <box size="100 100 22"/>
+                </shape>
+            </transform>
+            <group DEF="beacon-right">
+                <transform translation="0 61 35">
+                    <shape>
+                        <appearance USE="color-gray"></appearance>
+                        <box size="100 22 70"/>
+                    </shape>
+                </transform>
+                <transform translation="-61 11 35">
+                    <shape>
+                        <appearance USE="color-gray"></appearance>
+                        <box size="22 122 70"/>
+                    </shape>
+                </transform>
+            </group>
+        </group>
+    </transform>
+
+    <transform translation="1594 0 0">
+        <group id="beacon-ours-2">
+            <transform translation="0 0 11">
+                <shape>
+                    <appearance USE="color-ours"></appearance>
+                    <box size="100 100 22"/>
+                </shape>
+            </transform>
+            <shape USE="beacon-right"/>
+        </group>
+    </transform>
+
+    <transform translation="1594 -950 0">
+        <shape USE="beacon-right-theirs" id="beacon-theirs-3"/>
+    </transform>
+
+    <group id="big-beacon">
+        <transform translation="0 1122 489">
+            <shape>
+                <appearance USE="color-gray"></appearance>
+                <box size="22 200 978"/>
+            </shape>
+        </transform>
+        <transform translation="0 1233 500">
+            <shape>
+                <appearance USE="color-gray"></appearance>
+                <box size="200 22 1000"/>
+            </shape>
+        </transform>
+        <transform translation="-100 1122 989">
+            <shape>
+                <appearance USE="color-ours"></appearance>
+                <box size="200 200 22"/>
+            </shape>
+        </transform>
+        <transform translation="100 1122 989">
+            <shape>
+                <appearance USE="color-theirs"></appearance>
+                <box size="200 200 22"/>
+            </shape>
+        </transform>
+    </group>
+
+    <!-- START AREAS -->
+<!--     <group id="start-ours">
+        <transform translation="-1511 400 70.25">
+            <shape>
+                <appearance USE="color-ours"></appearance>
+                <plane size="22 600"/>
+            </shape>
+        </transform>
+        <transform translation="-1275 550 0.5">
+            <shape>
+                <appearance USE="color-redium"></appearance>
+                <plane size="450 300"/>
+            </shape>
+        </transform>
+        <transform translation="-1275 250 0.5">
+            <shape>
+                <appearance USE="color-greenium"></appearance>
+                <plane size="450 300"/>
+            </shape>
+        </transform>
+        <transform translation="-1275 -50 0.5">
+            <shape>
+                <appearance USE="color-blueium"></appearance>
+                <plane size="450 300"/>
+            </shape>
+        </transform>
+    </group>
+    <group id="start-theirs">
+        <transform translation="1511 400 70.25">
+            <shape>
+                <appearance USE="color-theirs"></appearance>
+                <plane size="22 600"/>
+            </shape>
+        </transform>
+        <transform translation="1275 550 0.5">
+            <shape>
+                <appearance USE="color-redium"></appearance>
+                <plane size="450 300"/>
+            </shape>
+        </transform>
+        <transform translation="1275 250 0.5">
+            <shape>
+                <appearance USE="color-greenium"></appearance>
+                <plane size="450 300"/>
+            </shape>
+        </transform>
+        <transform translation="1275 -50 0.5">
+            <shape>
+                <appearance USE="color-blueium"></appearance>
+                <plane size="450 300"/>
+            </shape>
+        </transform>
+    </group> -->
+
+    <!-- CIRCLES -->
+<!--     <transform translation="-500 -50 0.5">
+        <shape>
+            <appearance USE="color-black"></appearance>
+            <disk2d innerRadius="145" outerRadius="150"/>
+        </shape>
+    </transform>
+    <transform translation="500 -50 0.25">
+        <shape>
+            <appearance USE="color-black"></appearance>
+            <disk2d innerRadius="145" outerRadius="150"/>
+        </shape>
+    </transform> -->
+
+    <!-- EXPERIMENTS -->
+    <group id="experiment-ours">
+        <transform translation="-1275 1122 59">
+            <shape>
+                <appearance USE="color-ours"></appearance>
+                <box size="450 200 22"/>
+            </shape>
+        </transform>
+        <transform translation="-1275 1011 70.25">
+            <shape>
+                <appearance USE="color-ours"></appearance>
+                <plane size="450 22"/>
+            </shape>
+        </transform>
+        <group DEF="experiment-below">
+            <transform translation="-1489 1133 24">
+                <shape>
+                    <appearance USE="color-gray"></appearance>
+                    <box size="22 178 48"/>
+                </shape>
+            </transform>
+            <transform translation="-1061 1133 24">
+                <shape>
+                    <appearance USE="color-gray"></appearance>
+                    <box size="22 178 48"/>
+                </shape>
+            </transform>
+            <transform translation="-1275 1033 24">
+                <shape>
+                    <appearance USE="color-gray"></appearance>
+                    <box size="450 22 48"/>
+                </shape>
+            </transform>
+        </group>
+    </group>
+    <group id="experiment-ours">
+        <transform translation="1275 1122 59">
+            <shape>
+                <appearance USE="color-theirs"></appearance>
+                <box size="450 200 22"/>
+            </shape>
+        </transform>
+        <transform translation="1275 1011 70.25">
+            <shape>
+                <appearance USE="color-theirs"></appearance>
+                <plane size="450 22"/>
+            </shape>
+        </transform>
+        <transform translation="2550 0 0">
+            <shape USE="experiment-below"/>
+        </transform>
+    </group>
+
+    <!-- OXYGEN ATOM -->
+    <group id="oxygen-atom">
+        <transform translation="-48.5 1037 300">
+            <shape>
+                <appearance USE="color-ours"></appearance>
+                <box size="33 30 600"/>
+            </shape>
+        </transform>
+        <transform translation="-65.5 1037 530">
+            <shape>
+                <appearance USE="color-black"></appearance>
+                <box size="1 30 140"/>
+            </shape>
+        </transform>
+        <transform translation="48.5 1037 300">
+            <shape>
+                <appearance USE="color-theirs"></appearance>
+                <box size="33 30 600"/>
+            </shape>
+        </transform>
+        <transform translation="65.5 1037 530">
+            <shape>
+                <appearance USE="color-black"></appearance>
+                <box size="1 30 140"/>
+            </shape>
+        </transform>
+        <transform translation="0 1017 300">
+            <shape>
+                <appearance USE="color-gray"></appearance>
+                <box size="130 10 600"/>
+            </shape>
+        </transform>
+        <transform translation="0 1016.5 600">
+            <shape>
+                <appearance USE="color-oxygen"></appearance>
+                <cylinder radius="65" height="11"/>
+            </shape>
+        </transform>
+    </group>
+
+    <!-- PARTICLE ACCELERATOR -->
+    <group id="accelerator">
+        <transform translation="-125 1011 137.5">
+            <shape>
+                <appearance USE="color-theirs"></appearance>
+                <box size="250 22 135"/>
+            </shape>
+        </transform>
+        <transform translation="125 1011 137.5">
+            <shape>
+                <appearance USE="color-ours"></appearance>
+                <box size="250 22 135"/>
+            </shape>
+        </transform>
+        <transform translation="0 985 150">
+            <shape>
+                <appearance USE="color-gray"></appearance>
+                <cylinder radius="15" height="30"/>
+            </shape>
+        </transform>
+        <group DEF="ramp-right">
+            <!-- ramp -->
+            <transform translation="0 970 0">
+                <shape>
+                    <appearance USE="color-gray"></appearance>
+                    <extrusion crossSection="[(0,0), (950,0), (250,150), (0,150), (0,0)]"
+                               spine="[(0,0,0), (0,30,0)]" solid="false"/>
+                </shape>
+            </transform>
+            <!-- back wall -->
+            <transform translation="0 1000 0">
+                <shape>
+                    <appearance USE="color-gray"></appearance>
+                    <extrusion crossSection="[(250,205), (685,111.8), (685,70), (250,70)]"
+                               spine="[(0,0,0), (0,22,0)]" solid="false"/>
+                </shape>
+            </transform>
+            <!-- plexiglass front -->
+            <transform translation="0 965 0">
+                <shape>
+                    <appearance USE="color-glass"></appearance>
+                    <extrusion crossSection="[(250,0), (1000,0), (1000,70), (880,70), (250,205), (250,0)]"
+                               spine="[(0,0,0), (0,5,0)]" solid="false"/>
+                </shape>
+            </transform>
+            <!-- ramp stop bottom -->
+            <transform translation="989 985 35">
+                <shape>
+                    <appearance USE="color-gray"></appearance>
+                    <box size="22 30 70"/>
+                </shape>
+            </transform>
+            <!-- goldium back wall -->
+            <transform translation="725 1011 167.5">
+                <shape>
+                    <appearance USE="color-gray"></appearance>
+                    <box size="80 22 195"/>
+                </shape>
+            </transform>
+            <!-- goldium floor -->
+            <transform translation="725 982.5 157.5">
+                <shape><appearance USE="color-gray"></appearance>
+                    <box size="80 35 15"/>
+                </shape>
+            </transform>
+            <!-- goldium door stop -->
+            <transform translation="776 954 40">
+                <shape><appearance USE="color-gray"></appearance>
+                    <box size="22 22 80"/>
+                </shape>
+            </transform>
+            <!-- goldium door frame -->
+            <transform translation="725 957.5 82.5">
+                <shape>
+                    <appearance USE="color-ours"></appearance>
+                    <box size="80 15 165"/>
+                </shape>
+            </transform>
+            <!-- goldium door -->
+            <transform translation="725 947.5 187.5">
+                <shape>
+                    <appearance USE="color-ours"></appearance>
+                    <box size="80 5 155"/>
+                </shape>
+            </transform>
+        </group>
+        <!-- neg. scaling inverts surface normals -->
+        <transform scale="-1 1 1">
+            <group ccw="false">
+                <shape USE="ramp-right"/>
+            </group>
+        </transform>
+
+        <!-- ramp stop bottom -->
+        <transform translation="-989 985 35">
+            <shape>
+                <appearance USE="color-gray"></appearance>
+                <box size="22 30 70"/>
+            </shape>
+        </transform>
+        <!-- goldium back wall -->
+        <transform translation="-725 1011 167.5">
+            <shape>
+                <appearance USE="color-gray"></appearance>
+                <box size="80 22 195"/>
+            </shape>
+        </transform>
+        <!-- goldium floor -->
+        <transform translation="-725 982.5 157.5">
+            <shape><appearance USE="color-gray"></appearance>
+                <box size="80 35 15"/>
+            </shape>
+        </transform>
+        <!-- goldium door stop -->
+        <transform translation="-776 954 40">
+            <shape><appearance USE="color-gray"></appearance>
+                <box size="22 22 80"/>
+            </shape>
+        </transform>
+        <!-- goldium door frame -->
+        <transform translation="-725 957.5 82.5">
+            <shape>
+                <appearance USE="color-theirs"></appearance>
+                <box size="80 15 165"/>
+            </shape>
+        </transform>
+        <!-- goldium door -->
+        <transform translation="-725 947.5 187.5">
+            <shape>
+                <appearance USE="color-theirs"></appearance>
+                <box size="80 5 155"/>
+            </shape>
+        </transform>
+    </group>
+
+    <!-- 3x ATOM DISPENSER -->
+    <group id="atom-3-dispenser-ours">
+        <transform translation="-1275 -1015 85">
+            <shape>
+                <appearance USE="color-ours"></appearance>
+                <box size="300 30 30"/>
+            </shape>
+        </transform>
+        <transform translation="-1275 -1032.5 102.5">
+            <shape>
+                <appearance USE="color-glass"></appearance>
+                <box size="300 5 65"/>
+            </shape>
+        </transform>
+    </group>
+    <group id="atom-3-dispenser-theirs">
+        <transform translation="1275 -1015 85">
+            <shape>
+                <appearance USE="color-theirs"></appearance>
+                <box size="300 30 30"/>
+            </shape>
+        </transform>
+        <transform translation="1275 -1032.5 102.5">
+            <shape>
+                <appearance USE="color-glass"></appearance>
+                <box size="300 5 65"/>
+            </shape>
+        </transform>
+    </group>
+
+    <!-- 6x ATOM DISPENSER -->
+    <group id="atom-6-dispenser">
+        <transform translation="-750 -558 50">
+            <shape>
+                <appearance USE="color-gray"></appearance>
+                <box size="600 30 100"/>
+            </shape>
+        </transform>
+        <transform translation="-750 -575.5 67.5">
+            <shape>
+                <appearance USE="color-glass"></appearance>
+                <box size="600 5 135"/>
+            </shape>
+        </transform>
+        <transform translation="750 -558 50">
+            <shape>
+                <appearance USE="color-gray"></appearance>
+                <box size="600 30 100"/>
+            </shape>
+        </transform>
+        <transform translation="750 -575.5 67.5">
+            <shape>
+                <appearance USE="color-glass"></appearance>
+                <box size="600 5 135"/>
+            </shape>
+        </transform>
+    </group>
+
+    <!-- SLOPES -->
+    <group id="slope-extrusions">
+        <!-- plexiglass front -->
+        <transform translation="0 -1005 0">
+            <shape>
+                <appearance USE="color-glass"></appearance>
+                <extrusion crossSection="[(0,70), (1050,70), (278.7,220), (0,220), (0,70)]"
+                           spine="[(0,0,0), (0,5,0)]" solid="false"/>
+            </shape>
+        </transform>
+        <!-- wall back -->
+        <transform translation="0 -600 0">
+            <shape>
+                <appearance USE="color-black"></appearance>
+                <extrusion crossSection="[(250,0), (1050,0), (1050,70), (250,224.2), (250,0)]"
+                           spine="[(0,0,0), (0,22,0)]" solid="false"/>
+            </shape>
+        </transform>
+    </group>
+    <!-- neg. scaling inverts surface normals -->
+    <transform scale="-1 1 1">
+        <shape USE="slope-extrusions"/>
+    </transform>
+    <!-- actual ramp -->
+    <transform rotation="0 1 0 0.1928020566" translation="661 -800 75">
+        <shape>
+            <appearance>
+                <ImageTexture url="ramp_theirs.jpg"/>
+            </appearance>
+            <plane size="792.3 400"/>
+        </shape>
+    </transform>
+    <transform rotation="1 0 0 1.5708" translation="0 -1000 0">
+        <shape>
+            <appearance USE="color-theirs"></appearance>
+            <TriangleSet2D vertices="(272,0) (272,150) (1050,0)"/>
+        </shape>
+    </transform>
+    <transform rotation="0 1 0 -0.1928020566" translation="-661 -800 75">
+        <shape>
+            <appearance>
+                <ImageTexture url="ramp_ours.jpg"/>
+            </appearance>
+            <plane size="792.3 400"/>
+        </shape>
+    </transform>
+    <transform rotation="1 0 0 1.5708" translation="0 -1000 0">
+        <shape>
+            <appearance USE="color-ours"></appearance>
+            <TriangleSet2D vertices="(-1050,0) (-272,150) (-272,0)"/>
+        </shape>
+    </transform>
+    <group DEF="slope-gate">
+        <transform translation="261 -800 75">
+            <shape>
+                <appearance USE="color-black"></appearance>
+                <box size="22 400 150"/>
+            </shape>
+        </transform>
+        <transform translation="261 -611 194">
+            <shape>
+                <appearance USE="color-black"></appearance>
+                <box size="22 22 88"/>
+            </shape>
+        </transform>
+        <transform translation="261 -989 194">
+            <shape>
+                <appearance USE="color-black"></appearance>
+                <box size="22 22 88"/>
+            </shape>
+        </transform>
+        <transform translation="261 -800 249">
+            <shape>
+                <appearance USE="color-black"></appearance>
+                <box size="22 400 22"/>
+            </shape>
+        </transform>
+    </group>
+    <transform translation="-522 0 0">
+        <shape USE="slope-gate"/>
+    </transform>
+
+    <!-- SCALES -->
+    <group DEF="scales-floor">
+        <transform translation="137.5 -989 25">
+            <shape>
+                <appearance USE="color-black"></appearance>
+                <box size="225 22 50"/>
+            </shape>
+        </transform>
+        <transform translation="137.5 -589 25">
+            <shape>
+                <appearance USE="color-black"></appearance>
+                <box size="225 22 50"/>
+            </shape>
+        </transform>
+    </group>
+    <transform translation="-275 0 0">
+        <shape USE="scales-floor"/>
+    </transform>
+    <!-- scale hook -->
+    <group>
+        <transform translation="0 -689 20">
+            <shape>
+                <appearance USE="color-gray"></appearance>
+                <box size="40 622 40"/>
+            </shape>
+        </transform>
+        <transform translation="0 -831 225">
+            <shape>
+                <appearance USE="color-gray"></appearance>
+                <box size="40 40 370"/>
+            </shape>
+        </transform>
+        <transform translation="0 -747 225">
+            <shape>
+                <appearance USE="color-gray"></appearance>
+                <box size="40 40 370"/>
+            </shape>
+        </transform>
+        <transform translation="0 -789 290">
+            <shape>
+                <appearance USE="color-gray"></appearance>
+                <box size="40 44 40"/>
+            </shape>
+        </transform>
+        <transform translation="0 -789 380">
+            <shape>
+                <appearance USE="color-gray"></appearance>
+                <box size="40 40 40"/>
+            </shape>
+        </transform>
+        <transform translation="0 -789 370">
+            <transform rotation="0 0 1 -1.5708">
+                <shape>
+                    <appearance USE="color-metal"></appearance>
+                    <cylinder radius="4" height="400"/>
+                </shape>
+            </transform>
+        </transform>
+        <transform translation="20 -578 0" DEF="scale-glass">
+            <transform rotation="0 0 1 -1.5708">
+                <shape>
+                    <appearance USE="color-glass"></appearance>
+                    <extrusion crossSection="[(0,0), (422,0), (422,250), (397,275), (25,275), (0, 250), (0,0)]"
+                               spine="[(0,0,0), (0,5,0)]" solid="false"/>
+                </shape>
+            </transform>
+        </transform>
+        <transform translation="-45 0 0">
+            <shape USE="scale-glass"/>
+        </transform>
+    </group>
+
+    <group id="scale-theirs">
+        <transform translation="137.5 -789 85">
+            <transform translation="0 0 7.5">
+                <shape>
+                    <appearance USE="color-theirs"></appearance>
+                    <box size="220 422 15"/>
+                </shape>
+            </transform>
+            <transform translation="0 203.5 22.5">
+                <shape>
+                    <appearance USE="color-theirs"></appearance>
+                    <box size="220 15 15"/>
+                </shape>
+            </transform>
+            <transform translation="0 -203.5 22.5">
+                <shape>
+                    <appearance USE="color-theirs"></appearance>
+                    <box size="220 15 15"/>
+                </shape>
+            </transform>
+            <transform translation="102.5 0 22.5">
+                <shape>
+                    <appearance USE="color-theirs"></appearance>
+                    <box size="15 392 15"/>
+                </shape>
+            </transform>
+            <transform translation="-102.5 0 22.5">
+                <shape>
+                    <appearance USE="color-theirs"></appearance>
+                    <box size="15 392 15"/>
+                </shape>
+            </transform>
+            <group DEF="scale-hooks">
+                <transform translation="-51.25 -105.5 154.25" rotation="0.931971, 0, -0.362532, 0.92973689">
+                    <shape>
+                        <appearance USE="color-metal"></appearance>
+                        <cylinder radius="1" height="350.7"/>
+                    </shape>
+                </transform>
+                <transform translation="51.25 -105.5 154.25" rotation="0.931971, 0, 0.362532, 0.92973689">
+                    <shape>
+                        <appearance USE="color-metal"></appearance>
+                        <cylinder radius="1" height="350.7"/>
+                    </shape>
+                </transform>
+                <transform translation="-51.25 105.5 154.25" rotation="-0.931971, 0, 0.362532, 0.92973689">
+                    <shape>
+                        <appearance USE="color-metal"></appearance>
+                        <cylinder radius="1" height="350.7"/>
+                    </shape>
+                </transform>
+                <transform translation="51.25 105.5 154.25" rotation="-0.931971, 0, -0.362532, 0.92973689">
+                    <shape>
+                        <appearance USE="color-metal"></appearance>
+                        <cylinder radius="1" height="350.7"/>
+                    </shape>
+                </transform>
+            </group>
+        </transform>
+    </group>
+    <group id="scale-ours">
+        <transform translation="-137.5 -789 85">
+            <transform translation="0 0 7.5">
+                <shape>
+                    <appearance USE="color-ours"></appearance>
+                    <box size="220 422 15"/>
+                </shape>
+            </transform>
+            <transform translation="0 203.5 22.5">
+                <shape>
+                    <appearance USE="color-ours"></appearance>
+                    <box size="220 15 15"/>
+                </shape>
+            </transform>
+            <transform translation="0 -203.5 22.5">
+                <shape>
+                    <appearance USE="color-ours"></appearance>
+                    <box size="220 15 15"/>
+                </shape>
+            </transform>
+            <transform translation="102.5 0 22.5">
+                <shape>
+                    <appearance USE="color-ours"></appearance>
+                    <box size="15 392 15"/>
+                </shape>
+            </transform>
+            <transform translation="-102.5 0 22.5">
+                <shape>
+                    <appearance USE="color-ours"></appearance>
+                    <box size="15 392 15"/>
+                </shape>
+            </transform>
+            <shape USE="scale-hooks"/>
+        </transform>
+    </group>
+
+</group>
+
+
+<!-- ELEMELONS -->
+
+<!-- in front of our start areas -->
+<transform translation="-1000 250 0">
+    <group DEF="redium">
+        <transform translation="0 0 12.5" rotation="1 0 0 -1.5708">
+            <shape>
+                <appearance USE="color-black"></appearance>
+                <cylinder radius="38" height="25" top="false" bottom="false"/>
+            </shape>
+        </transform>
+        <transform translation="0 0 25">
+            <shape>
+                <appearance><ImageTexture url="redium.png"/></appearance>
+                <disk2d outerRadius="38"/>
+            </shape>
+        </transform>
+        <transform rotation="1 0 0 3.1416">
+            <shape>
+                <appearance><ImageTexture url="redium.png"/></appearance>
+                <disk2d outerRadius="38"/>
+            </shape>
+        </transform>
+    </group>
+</transform>
+
+<transform translation="-1000 -50 0">
+    <group DEF="greenium">
+        <transform translation="0 0 12.5" rotation="1 0 0 -1.5708">
+            <shape>
+                <appearance USE="color-black"></appearance>
+                <cylinder radius="38" height="25" top="false" bottom="false"/>
+            </shape>
+        </transform>
+        <transform translation="0 0 25">
+            <shape>
+                <appearance><ImageTexture url="greenium.png"/></appearance>
+                <disk2d outerRadius="38"/>
+            </shape>
+        </transform>
+        <transform rotation="1 0 0 3.1416">
+            <shape>
+                <appearance><ImageTexture url="greenium.png"/></appearance>
+                <disk2d outerRadius="38"/>
+            </shape>
+        </transform>
+    </group>
+</transform>
+
+<transform translation="-500 20 0">
+    <group DEF="blueium">
+        <transform translation="0 0 12.5" rotation="1 0 0 -1.5708">
+            <shape>
+                <appearance USE="color-black"></appearance>
+                <cylinder radius="38" height="25" top="false" bottom="false"/>
+            </shape>
+        </transform>
+        <transform translation="0 0 25">
+            <shape>
+                <appearance><ImageTexture url="blueium.png"/></appearance>
+                <disk2d outerRadius="38"/>
+            </shape>
+        </transform>
+        <transform rotation="1 0 0 3.1416">
+            <shape>
+                <appearance><ImageTexture url="blueium.png"/></appearance>
+                <disk2d outerRadius="38"/>
+            </shape>
+        </transform>
+    </group>
+</transform>
+
+<transform translation="-1000 550 0">
+    <shape USE="redium"/>
+</transform>
+
+<!-- in front of their start areas -->
+<transform translation="1000 550 0">
+    <shape USE="redium"/>
+</transform>
+
+<transform translation="1000 250 0">
+    <shape USE="redium"/>
+</transform>
+
+<transform translation="1000 -50 0">
+    <shape USE="greenium"/>
+</transform>
+
+
+<!-- inside our circle -->
+<transform translation="-420 -60 0">
+    <shape USE="redium"/>
+</transform>
+
+<transform translation="-510 -120 0">
+    <shape USE="redium"/>
+</transform>
+
+<transform translation="-570 -40 0">
+    <shape USE="greenium"/>
+</transform>
+
+<!-- inside their circle -->
+<transform translation="560 -50 0">
+    <shape USE="blueium"/>
+</transform>
+
+<transform translation="420 20 0">
+    <shape USE="redium"/>
+</transform>
+
+<transform translation="510 -120 0">
+    <shape USE="redium"/>
+</transform>
+
+<transform translation="450 -60 0">
+    <shape USE="greenium"/>
+</transform>
+
+
+<!-- on our slope -->
+<transform translation="-666 -800 75" rotation="0 1 0 -0.191986">
+    <shape USE="greenium"/>
+</transform>
+
+<!-- on their slope -->
+<transform translation="666 -800 75" rotation="0 1 0 0.191986">
+    <shape USE="greenium"/>
+</transform>
+
+
+<!-- on our particle accelerator -->
+<transform translation="210 997.5 185" rotation="1 0 0 1.5708">
+    <shape USE="blueium"/>
+</transform>
+<transform translation="725 1000 203" rotation="1 0 0 1.5708">
+    <group DEF="goldium">
+        <transform translation="0 0 25" rotation="1 0 0 -1.5708">
+            <shape>
+                <appearance USE="color-black"></appearance>
+                <cylinder radius="38" height="50" top="false" bottom="false"/>
+            </shape>
+        </transform>
+        <transform translation="0 0 50">
+            <shape>
+                <appearance><ImageTexture url="goldium.png"/></appearance>
+                <disk2d outerRadius="38"/>
+            </shape>
+        </transform>
+        <transform rotation="1 0 0 3.1416">
+            <shape>
+                <appearance><ImageTexture url="goldium.png"/></appearance>
+                <disk2d outerRadius="38"/>
+            </shape>
+        </transform>
+    </group>
+</transform>
+
+<!-- on their particle accelerator -->
+<transform translation="-210 997.5 185" rotation="1 0 0 1.5708">
+    <shape USE="blueium"/>
+</transform>
+<transform translation="-725 1000 203" rotation="1 0 0 1.5708">
+    <shape USE="goldium"/>
+</transform>
+
+
+<!-- on our 3x dispenser -->
+<transform translation="-1375 -1002.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="blueium"/>
+</transform>
+<transform translation="-1275 -1002.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="greenium"/>
+</transform>
+<transform translation="-1175 -1002.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="redium"/>
+</transform>
+
+<!-- on their 3x dispenser -->
+<transform translation="1375 -1002.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="blueium"/>
+</transform>
+<transform translation="1275 -1002.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="greenium"/>
+</transform>
+<transform translation="1175 -1002.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="redium"/>
+</transform>
+
+
+<!-- on our 6x dispenser -->
+<transform translation="-1000 -545.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="redium"/>
+</transform>
+<transform translation="-900 -545.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="greenium"/>
+</transform>
+<transform translation="-800 -545.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="redium"/>
+</transform>
+<transform translation="-700 -545.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="blueium"/>
+</transform>
+<transform translation="-600 -545.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="redium"/>
+</transform>
+<transform translation="-500 -545.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="greenium"/>
+</transform>
+
+<!-- on their 6x dispenser -->
+<transform translation="1000 -545.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="redium"/>
+</transform>
+<transform translation="900 -545.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="greenium"/>
+</transform>
+<transform translation="800 -545.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="redium"/>
+</transform>
+<transform translation="700 -545.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="blueium"/>
+</transform>
+<transform translation="600 -545.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="redium"/>
+</transform>
+<transform translation="500 -545.5 128.5" rotation="1 0 0 1.5708">
+    <shape USE="greenium"/>
+</transform>
+
+
+
+
+</transform>
+</scene>
+</x3d>
