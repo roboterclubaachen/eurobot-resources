@@ -1,0 +1,111 @@
+<svg version="1.1"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns="http://www.w3.org/2000/svg"
+	width="2500" height="3300"
+	viewBox="-1250 -1650 2500 3300">
+
+	<!--
+		Copyright (c) 2016-2018, Roboterclub Aachen e.V.
+		Copyright (c) 2019, Raphael Lehmann
+		All rights reserved.
+
+		Redistribution and use in source and binary forms, with or without
+		modification, are permitted provided that the following conditions are met:
+
+		 * Redistributions of source code must retain the above copyright
+		   notice, this list of conditions and the following disclaimer.
+		 * Redistributions in binary form must reproduce the above copyright
+		   notice, this list of conditions and the following disclaimer in the
+		   documentation and/or other materials provided with the distribution.
+		 * Neither the name of the Roboterclub Aachen e.V. nor the
+		   names of its contributors may be used to endorse or promote products
+		   derived from this software without specific prior written permission.
+
+		THIS SOFTWARE IS PROVIDED BY ROBOTERCLUB AACHEN E.V. ''AS IS'' AND ANY
+		EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+		WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+		DISCLAIMED. IN NO EVENT SHALL ROBOTERCLUB AACHEN E.V. BE LIABLE FOR ANY
+		DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+		(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+		LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+		ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+		(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+		SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+	-->
+
+	<title>Eurobot 2018 Game Arena</title>
+
+	<!-- The official eurobot colors are:
+		- TODO
+
+		The colors are hardcoded since this significantly speeds up drawing.
+	-->
+	<defs>
+		<!-- beacons are always the same (but now partly rotated) -->
+		<g id="beacon" z="0">
+			<!-- drawn so that the origin is in the middle of the beacon -->
+			<path d="M -72,72 v -122 h 67 v 50 a 5,5 0 0 0 5,5 5,5 0 0 0 5,-5 v -50 H 50 v 122 Z" />
+			<path d="M -72,-50 l 22,0 l 0,100 l 100,0 l 0,22 l -122,0 z" stroke="black" stroke-width="1" zheight="70" />
+		</g>
+		<g id="central-tracking-device" z="1000">
+			<path d="M -50,0 v -100 h 45 v 50 a 5,5 0 0 0 5,5 5,5 0 0 0 5,-5 v -50 H 50 v 100 Z" fill="#7f3a98"/>
+			<path d="M -50,0 v 100 h 45 v -50 a 5,5 0 0 1 5,-5 5,5 0 0 1 5,5 v 50 H 50 v -100 Z" fill="#ffbe32"/>
+			<path d="M -50,0 v 100 h 45 v -50 a 5,5 0 0 1 5,-5 5,5 0 0 1 5,5 v 50 h 45 v -200
+					 h -45 v 50 a 5,5 0 0 1 -5,5 5,5 0 0 1 -5,-5 v -50 h -45 Z" stroke="black" fill-opacity="0" />
+		</g>
+
+		<!-- static game elements -->
+	</defs>
+
+	<!-- Our internal coordinate system is:
+
+		- the origin is in the center of the game area
+		- x axis: goes from the starting areas to the bees from negative to positive (left to right)
+		- y axis: goes from the green to orange start area from negative to positive (down to up)
+	-->
+
+	<!-- gray game area excluding border -->
+	<rect x="-1022" y="-1522" width="2044" height="3044" fill="#3d3d3d"/>
+
+	<!-- draw the beacons -->
+	<g id="beacons">
+		<!-- ordered -x=>+x -->
+		<use x="-950" y="-1594" id="beacon-ours-1" xlink:href="#beacon" fill="#7f3a98"/>
+		<use x="0"     y="-1594" id="beacon-theirs-2"   xlink:href="#beacon" fill="#ffbe32"/>
+		<use x="950"  y="-1594" id="beacon-ours-3" xlink:href="#beacon" fill="#7f3a98"/>
+
+		<use x="-950" y="-1594" id="beacon-theirs-1" xlink:href="#beacon" fill="#ffbe32" transform="rotate(180)" />
+		<use x="0"     y="-1594" id="beacon-ours-2"   xlink:href="#beacon" fill="#7f3a98" transform="rotate(180)"/>
+		<use x="950"  y="-1594" id="beacon-theirs-3" xlink:href="#beacon" fill="#ffbe32" transform="rotate(180)"/>
+
+		<use x="-1072"  y="0" id="ctd" xlink:href="#central-tracking-device"/>
+	</g>
+
+	<!-- starting areas -->
+	<rect x="-700" y="-1500" width="300" height="450" id="start-area-ours-red" fill="#ee2915" />
+	<rect x="-400" y="-1500" width="300" height="450" id="start-area-ours-green" fill="#4fbd5b" />
+	<rect x="-700" y="1050" width="300" height="450" id="start-area-theirs-red" fill="#ee2915" />
+	<rect x="-400" y="1050" width="300" height="450" id="start-area-theirs-green" fill="#4fbd5b" />
+
+	<!-- areas next to starting area -->
+	<rect x="-100" y="-1500" width="300" height="450" id="area-ours-blue" fill="#0c86cb" />
+	<rect x="-100" y="1050" width="300" height="450" id="area-theirs-blue" fill="#0c86cb" />
+
+	<!-- ramps -->
+	<rect x="600" y="-1050" width="400" height="778" id="ramp-theirs" fill="#000" />
+	<rect x="600" y="1050" width="400" height="-778" id="ramp-ours" fill="#000" />
+
+	<rect x="543" y="1050" width="35" height="-600" id="ramp-theirs" fill="#999" />
+	<rect x="543" y="-1050" width="35" height="600" id="ramp-theirs" fill="#999" />
+
+	<!-- scales -->
+	<rect x="400" y="-20" width="600" height="40" id="ramp-theirs" fill="#ccc" />
+	<rect x="600" y="-20" width="400" height="-272" id="scale-ours" fill="#7f3a98" />
+	<rect x="600" y="20" width="400" height="272" id="scale-theirs" fill="#ffbe32" />
+
+	<!-- draw the playground border -->
+	<g fill-opacity="0" stroke="black" stroke-width="2">
+		<rect x="-1022" y="-1522" width="2044" height="3044"/>
+		<rect x="-1000" y="-1500" width="2000" height="3000"/>
+	</g>
+</svg>
