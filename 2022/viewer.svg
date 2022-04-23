@@ -1,0 +1,53 @@
+<svg version="1.1"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns="http://www.w3.org/2000/svg"
+	width="675" height="825">
+
+	<!--
+		Copyright (c) 2015-2017, Roboterclub Aachen e.V.
+		All rights reserved.
+
+		Redistribution and use in source and binary forms, with or without
+		modification, are permitted provided that the following conditions are met:
+
+		 * Redistributions of source code must retain the above copyright
+		   notice, this list of conditions and the following disclaimer.
+		 * Redistributions in binary form must reproduce the above copyright
+		   notice, this list of conditions and the following disclaimer in the
+		   documentation and/or other materials provided with the distribution.
+		 * Neither the name of the Roboterclub Aachen e.V. nor the
+		   names of its contributors may be used to endorse or promote products
+		   derived from this software without specific prior written permission.
+
+		THIS SOFTWARE IS PROVIDED BY ROBOTERCLUB AACHEN E.V. ''AS IS'' AND ANY
+		EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+		WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+		DISCLAIMED. IN NO EVENT SHALL ROBOTERCLUB AACHEN E.V. BE LIABLE FOR ANY
+		DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+		(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+		LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+		ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+		(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+		SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ 	-->
+
+	<title>Eurobot 2022 Game Arena</title>
+
+	<!-- Our internal coordinate system is:
+
+		- the origin is in the center of the game area
+		- x axis: goes from the stairs to the building area from negative to positive (left to right)
+		- y axis: goes from the yellow to green start area from negative to positive (down to up)
+
+		Please note that the y-axis polarity is the opposite of the typical graphics drawing coordinate system.
+		Since we want the x and y positions of the elements to the in our internal coordinate system,
+		we need to flip the y-axis around the x-axis.
+
+		In order to see the entire SVG in a we browser we must also translate the entire SVG into positive coordinates.
+		This is since most webbrowsers clip the SVG viewbox apparently at origin (0,0) and therefore a negative viewbox
+		origin is not displayed. We also scale and rotate there for easier viewing.
+	-->
+	<g transform="scale(0.25) translate(50,3300) scale(1,-1)">
+		<image x="0" y="0" width="2800" height="3300" href="playground.svg"/>
+	</g>
+</svg>

@@ -80,14 +80,17 @@
 		<use x="-1122"  y="0" id="ctd" xlink:href="#central-tracking-device" transform="rotate(180)"/>
 	</g>
 
-	<!-- import background image -->
-	<g>
-		<image x="-1500" y="-1000" width="3000" height="2000" transform="rotate(90)" href="vinyle-table-2022.svg" />
-	</g>
 
 	<!-- draw the playground border -->
 	<g fill-opacity="0" stroke-width="2">
 		<rect x="-1022" y="-1522" width="2044" height="3044" stroke="black"/>
 		<rect x="-1000" y="-1500" width="2000" height="3000" stroke="red"/>
+	</g>
+
+
+	<!-- import background image -->
+	<g>
+		<image href="vinyle-table-2022.lowres1.png" x="-1500" y="-1000" width="3000" height="2000" transform="rotate(90)" />
+
 	</g>
 </svg>
