@@ -90,7 +90,7 @@
 
 	<!-- import background image -->
 	<g>
-		<image href="vinyle-table-2022.lowres1.png" x="-1500" y="-1000" width="3000" height="2000" transform="rotate(90)" />
+		<image xlink:href="vinyle-table-2022.lowres1.png" x="-1500" y="-1000" width="3000" height="2000" transform="rotate(90)" />
 
 	</g>
 </svg>

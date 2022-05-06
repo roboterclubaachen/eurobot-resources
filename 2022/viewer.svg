@@ -48,6 +48,6 @@
 		origin is not displayed. We also scale and rotate there for easier viewing.
 	-->
 	<g transform="scale(0.25) translate(50,3300) scale(1,-1)">
-		<image x="0" y="0" width="2800" height="3300" href="playground.svg"/>
+		<image x="0" y="0" width="2800" height="3300" xlink:href="playground.svg"/>
 	</g>
 </svg>
