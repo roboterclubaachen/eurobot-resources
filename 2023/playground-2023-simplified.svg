@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2244"
+   height="3444"
+   viewBox="-1122 -1722 2244 3444"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="playground-2023.svg">
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <!-- playground -->
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="playground"
+       width="2000"
+       height="3000"
+       x="-1000"
+       y="-1500" />
+    <!-- fixed-beacon-upper-left -->
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="fixed-beacon-upper-left"
+       width="100"
+       height="100"
+       x="-1122"
+       y="-1500" />
+    <!-- fixed-beacon-middle-left -->
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="fixed-beacon-middle-left"
+       width="100"
+       height="100"
+       x="-1122"
+       y="-50" />
+    <!-- fixed-beacon-lower-left -->
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+      id="fixed-beacon-lower-left"
+       width="100"
+       height="100"
+       x="-1122"
+       y="1400" />
+    <!-- fixed-beacon-upper-right -->
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+      id="fixed-beacon-upper-right"
+       width="100"
+       height="100"
+       x="1022"
+       y="-1500" />
+    <!-- fixed-beacon-middle-right -->
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="fixed-beacon-middle-right"
+       width="100"
+       height="100"
+       x="1022"
+       y="-50" />
+    <!-- fixed-beacon-lower-right -->
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="fixed-beacon-lower-right"
+       width="100"
+       height="100"
+       x="1022"
+       y="1400" />
+    <!-- extended-plate-blue -->
+    <rect
+       style="opacity:1;fill:#005ce5;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="extended-plate-blue"
+       width="450"
+       height="200"
+       x="-1000"
+       y="-1722" />
+    <!-- extended-plate-green -->
+    <rect
+       style="opacity:1;fill:#00b212;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="extended-plate-green"
+       width="450"
+       height="200"
+       x="550"
+       y="-1722" />
+    <!-- plate-green-1 -->
+    <rect
+       style="opacity:1;fill:#00b212;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="plate-green-1"
+       width="450"
+       height="450"
+       x="550"
+       y="-1500" />
+    <!-- plate-green-2 -->
+    <rect
+      style="opacity:1;fill:#00b212;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+      id="plate-green-2"
+      width="450"
+      height="450"
+      x="550"
+      y="150" />
+    <!-- plate-green-3 -->
+    <rect
+      style="opacity:1;fill:#00b212;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+      id="plate-green-3"
+      width="450"
+      height="450"
+      x="50"
+      y="1050" />
+    <!-- plate-green-4 -->
+    <rect
+      style="opacity:1;fill:#00b212;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+      id="plate-green-4"
+      width="450"
+      height="450"
+      x="-1000"
+      y="1050" />
+    <!-- plate-green-5 -->
+    <rect
+      style="opacity:1;fill:#00b212;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+      id="plate-green-5"
+      width="450"
+      height="450"
+      x="-1000"
+      y="-600" />
+    <!-- plate-blue-1 -->
+    <rect
+      style="opacity:1;fill:#005ce5;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+      id="plate-blue-1"
+      width="450"
+      height="450"
+      x="-1000"
+      y="-1500" />
+    <!-- plate-blue-2 -->
+    <rect
+      style="opacity:1;fill:#005ce5;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+      id="plate-blue-2"
+      width="450"
+      height="450"
+      x="-1000"
+      y="150" />
+    <!-- plate-blue-3 -->
+    <rect
+      style="opacity:1;fill:#005ce5;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+      id="plate-blue-3"
+      width="450"
+      height="450"
+      x="-500"
+      y="1050" />
+    <!-- plate-blue-4 -->
+    <rect
+      style="opacity:1;fill:#005ce5;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+      id="plate-blue-4"
+      width="450"
+      height="450"
+      x="550"
+      y="1050" />
+    <!-- plate-blue-5 -->
+    <rect
+      style="opacity:1;fill:#005ce5;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+      id="plate-blue-5"
+      width="450"
+      height="450"
+      x="550"
+      y="-600" />
+    <!--  -->
+    <!--  -->
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:10, 10;stroke-dashoffset:0;stroke-opacity:1"
+       d="m -1000,0 c 2000,0 2000,0 2000,0"
+       id="line-middle-vertical"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:9.91799928, 19.83599857;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 0,-1500 c 0,3000 0.0,3000 0,3000"
+       id="path22642-2"
+       inkscape:connector-curvature="0" />
+    <!-- inner-plate-green-2 -->
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path22710-6"
+      cx="775"
+      cy="375"
+      r="175" />
+    <!-- inner-plate-green-3 -->
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path22710-2"
+      cx="275"
+      cy="1275"
+      r="175" />
+    <!-- inner-plate-green-4 -->
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path22710-61"
+       cx="-775"
+       cy="1275"
+       r="175" />
+    <!-- inner-plate-green-5 -->
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path22710-61-7"
+       cx="-775"
+       cy="-375"
+       r="175" />
+    <!-- inner-plate-blue-2 -->
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path22710-61-9"
+       cx="-775"
+       cy="375"
+       r="175" />
+    <!-- inner-plate-blue-3 -->
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path22710-61-2"
+       cx="-275"
+       cy="1275"
+       r="175" />
+    <!-- inner-plate-blue-4 -->
+    <circle
+      style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+      id="path22710-61-9"
+      cx="775"
+      cy="1275"
+      r="175" />
+    <!-- inner-plate-blue-5 -->
+    <circle
+      style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+      id="path22710-61-2"
+      cx="775"
+      cy="-375"
+      r="175" />
+    <!-- inner-plate-green-1 -->
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect2076-3-6-7-5-5-9-0"
+       width="337.52029"
+       height="337.52029"
+      x="600"
+      y="-1450" />
+    <!-- inner-plate-blue-1 -->
+    <rect
+       style="opacity:1;fill:#fffffc;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect2076-3-6-7-5-5-9-2"
+       width="337.52029"
+       height="337.52029"
+      x="-950"
+      y="-1450" />
+    </g>
+</svg>
